@@ -1,0 +1,202 @@
+.intro {
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.intro__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+   
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(9, 13, 54, 0.55), rgba(9, 13, 54, 0.55));
+    }
+}
+
+.intro__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro__content {
+    min-height: 80rem;
+    padding-top: 13rem;
+    padding-bottom: 11rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro__top-row {
+    display: flex;
+}
+
+.intro__left-col {
+    flex-shrink: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.intro__right-col {
+    text-align: right;
+}
+
+.intro__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.intro__tag {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    display: inline-block;
+    padding: 1rem 2.4rem;
+    background: rgba(9, 13, 54, 0.5);
+    border-radius: 0.4rem;
+    color: white;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.intro__updated-at {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #a0a7b2;
+}
+
+.intro__controls {
+    display: flex;
+    align-items: center;
+}
+
+.intro__controls-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.8rem;
+    color: transparent;
+    &:link,
+    &:visited {
+        color: transparent;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    &:hover {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.intro__franchise-info {
+    margin: 0 auto;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro__franchise-logo {
+    width: 18rem;
+    height: auto;
+
+    margin-bottom: 2rem;
+}
+
+.intro__franchise-heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 5.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.intro__franchise-description {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 8rem;
+}
+
+.intro__franchise-buttons {
+    display: grid;
+    width: 100%;
+    max-width: 55rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1.8rem;
+}
+
+.intro__franchise-buttons-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.intro__franchise-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: var(--gotham);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    transition: all .2s;
+    width: 100%;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &--filled {
+        background: #4659FF;
+        border-color: #4659FF;
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        fill: white;
+        margin-left: 1.4rem;
+    }
+}
+
+.intro__franchise-button-details {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-top: 1.5rem;
+    color: #F0F0F0;
+}

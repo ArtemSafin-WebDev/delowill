@@ -1,0 +1,107 @@
+.like-franchise__content {
+    background: linear-gradient(96.16deg, #7c88ff -34.71%, #4659ff 118.45%);
+    border-radius: 1.2rem;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+.like-franchise__heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.4rem;
+    line-height: 4rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 5.5rem;
+}
+
+.like-franchise__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 3.2rem;
+}
+
+.like-franchise__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.like-franchise__card {
+    background: #ffffff;
+    border-radius: 1.2rem;
+    padding: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.like-franchise__card-info {
+    display: flex;
+    margin-bottom: 2.2rem;
+}
+
+.like-franchise__card-info-content {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.like-franchise__card-info-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 1rem;
+}
+
+.like-franchise__card-info-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #a0a7b2;
+}
+
+.like-franchise__card-info-photo-container {
+    position: relative;
+    width: 6.2rem;
+    height: 6.2rem;
+    flex-shrink: 0;
+    margin-left: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.like-franchise__card-info-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.like-franchise__card-btn {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    padding: 2.5rem 5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--gotham);
+    border-radius: 0.4rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.like-franchise__card-price {
+    font-weight: bold;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 2.2rem;
+}
