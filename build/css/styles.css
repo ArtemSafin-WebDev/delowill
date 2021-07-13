@@ -1683,10 +1683,12 @@ select:-webkit-autofill:focus {
   font-size: 1.4rem;
   line-height: 1.6rem;
   display: inline-block;
-  padding: 1rem 2.4rem;
+  padding: 1rem 2rem;
   background: rgba(9, 13, 54, 0.5);
   border-radius: 0.4rem;
-  color: white; }
+  color: white;
+  -webkit-clip-path: polygon(0 0, calc(100% - 1.2rem) 0, 100% 50%, calc(100% - 1.2rem) 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 1.2rem) 0, 100% 50%, calc(100% - 1.2rem) 100%, 0 100%); }
   .intro__tag:link, .intro__tag:visited {
     color: white; }
 
