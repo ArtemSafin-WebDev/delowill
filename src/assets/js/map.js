@@ -5,60 +5,60 @@ document.addEventListener('DOMContentLoaded', function() {
         ymaps.ready(initWhereToBuy);
 
         function initWhereToBuy() {
-            // console.log('Initializing points map');
-            // var pin = {
-            //     iconLayout: 'default#image',
-            //     iconImageHref: 'img/pin.svg',
-            //     iconImageSize: [28, 28],
-            //     iconImageOffset: [-14, -14]
-            // };
+            console.log('Initializing points map');
+            var pin = {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/pin.svg',
+                iconImageSize: [23, 23],
+                iconImageOffset: [-11.5, -11.5]
+            };
 
             var center = [55.796554, 49.104752];
 
-            // var pointsMapData = [
-            //     {
-            //         coords: [55.831082, 49.079644],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     },
-            //     {
-            //         coords: [55.815159, 49.101276],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     },
-            //     {
-            //         coords: [55.812957, 49.183735],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     },
-            //     {
-            //         coords: [55.79474, 49.114071],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     },
-            //     {
-            //         coords: [55.833308, 49.132141],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     },
-            //     {
-            //         coords: [55.776266, 49.140724],
-            //         title: 'Альфа-Авто',
-            //         content: `Россия, Адлер, ул. Авиационная, 34/3
-            //         Пн-Сб с 9:00 до 19:00. Вс: выходной
-            //         +7 (862) 291 48 48`
-            //     }
-            // ];
+            var pointsMapData = [
+                {
+                    coords: [55.831082, 49.079644],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                },
+                {
+                    coords: [55.815159, 49.101276],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                },
+                {
+                    coords: [55.812957, 49.183735],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                },
+                {
+                    coords: [55.79474, 49.114071],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                },
+                {
+                    coords: [55.833308, 49.132141],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                },
+                {
+                    coords: [55.776266, 49.140724],
+                    title: 'Альфа-Авто',
+                    content: `Россия, Адлер, ул. Авиационная, 34/3
+                    Пн-Сб с 9:00 до 19:00. Вс: выходной
+                    +7 (862) 291 48 48`
+                }
+            ];
 
             var mapInstance = new ymaps.Map(mapElement, {
                 center: center,
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             mapInstance.controls.add(zoomControl);
             
             
-            return
+            
 
             var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 '<div class="popover top">' +
@@ -206,15 +206,15 @@ document.addEventListener('DOMContentLoaded', function() {
             var objectManager = new ymaps.ObjectManager({
                 clusterize: true,
                 clusterHasBalloon: false,
-                geoObjectOpenBalloonOnClick: true,
-                clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="clusterIcon">{{ properties.geoObjects.length }}</div>'),
-                // Чтобы метка была кликабельной, переопределим ее активную область.
-                clusterIconShape: {
-                    type: 'Circle',
-                    coordinates: [14, 14],
-                    radius: 14
-                }
-                // clusterIconColor: '#e62f48'
+                geoObjectOpenBalloonOnClick: false,
+                // clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="clusterIcon">{{ properties.geoObjects.length }}</div>'),
+               
+                // clusterIconShape: {
+                //     type: 'Circle',
+                //     coordinates: [14, 14],
+                //     radius: 14
+                // }
+                
             });
             mapInstance.geoObjects.add(objectManager);
 

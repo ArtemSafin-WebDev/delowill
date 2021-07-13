@@ -1239,6 +1239,10 @@ select:-webkit-autofill:focus {
           user-select: none;
   pointer-events: none; }
 
+[class*='ymaps-2'][class*='-ground-pane'] {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
+
 .container {
   width: 100%;
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
