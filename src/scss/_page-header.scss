@@ -12,6 +12,9 @@
 .page-header__row {
     display: flex;
     min-height: 7.5rem;
+    @include breakpoint(mobile) {
+        min-height: 5.5rem;
+    }
 }
 
 .page-header__logo-menu {
@@ -24,6 +27,10 @@
     align-self: center;
     position: relative;
     justify-content: space-between;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
 
     &.active {
         .page-header__logo-menu-dropdown  {
@@ -90,6 +97,10 @@
         height: auto;
         width: 14.6rem;
         height: 2.6rem;
+        @include breakpoint(mobile) {
+            width: 12rem;
+            height: 2rem;
+        }
     }
 }
 
@@ -131,6 +142,9 @@
     display: flex;
     align-items: center;
     margin-right: 4rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .page-header__actions-link {
@@ -172,6 +186,10 @@
     align-self: stretch;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .page-header__username {
@@ -196,6 +214,10 @@
     width: 22rem;
     margin-left: auto;
     align-self: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .page-header__search-form {

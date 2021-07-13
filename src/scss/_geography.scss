@@ -12,30 +12,56 @@
     line-height: 4rem;
     letter-spacing: -0.04rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .geography__info-text {
     font-size: 1.8rem;
     line-height: 2.6rem;
     max-width: 70rem;
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
 }
 
 .geography__filters {
     margin-bottom: 4.5rem;
     display: flex;
     align-items: flex-end;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .geography__filters-select {
     width: 25.6rem;
     margin-right: 5rem;
     flex-shrink: 0;
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 
 .geography__legend {
     display: flex;
     align-items: center;
     padding: 1.5rem 0;
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
 }
 
 .geography__legend-item {
@@ -64,6 +90,9 @@
 
 .geography__reviews {
     margin-left: 10rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 .geography__reviews-items {
     display: flex;
@@ -71,6 +100,7 @@
     padding: 1.2rem;
     border: 1px solid #f0f0f0;
     border-radius: 0.4rem;
+    justify-content: space-between;
 }
 
 .geography__reviews-item {
@@ -121,6 +151,10 @@
     margin-bottom: 0.6rem;
     transition: all 0.2s;
     user-select: none;
+
+    @include breakpoint(mobile) {
+        padding: .6rem 1.2rem;
+    }
     .no-touch &:hover,
     .touch &:active {
         background-color: var(--primary-color);
@@ -138,9 +172,8 @@
     font-size: 1.6rem;
     line-height: 2rem;
     margin-left: 0.8rem;
-    transition: color .2s;
+    transition: color 0.2s;
 }
-
 
 .geography__content {
     border-bottom-left-radius: 0;
@@ -152,10 +185,16 @@
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;
     overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &::before {
         content: '';
         display: block;
         padding-bottom: 40%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 70%;
+        }
     }
 }
 
@@ -166,5 +205,4 @@
     width: 100%;
     height: 100%;
     background-color: lightgrey;
-    
 }

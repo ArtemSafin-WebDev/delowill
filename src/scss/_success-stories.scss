@@ -9,6 +9,9 @@
 .success-stories__info {
     max-width: 80rem;
     margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .success-stories__info-heading {
@@ -17,11 +20,22 @@
     line-height: 4rem;
     letter-spacing: -0.04rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .success-stories__info-text {
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
 }
 
 .success-stories__slider {
@@ -32,6 +46,9 @@
 
     .swiper-slide {
         width: 86rem;
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
     }
 }
 
@@ -47,7 +64,12 @@
     justify-content: center;
     transition: background-color 0.2s, opacity 0.2s;
     background-color: rgba(white, 0.9);
+    
     z-index: 50;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     &--prev {
         right: 100%;
         margin-right: 6.8rem;
@@ -82,7 +104,7 @@
 .success-stories__slider-card {
     display: flex;
     flex-direction: column;
-    
+
     .no-touch &:hover,
     .touch &:active {
         .success-stories__slider-card-play {
@@ -106,6 +128,10 @@
     transform: translateZ(0);
     color: white;
 
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+
     &:link,
     &:visited {
         color: white;
@@ -114,6 +140,10 @@
         content: '';
         display: block;
         padding-bottom: 58%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 70%;
+        }
     }
     &::after {
         content: '';
@@ -149,13 +179,17 @@
 
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 
     .swiper-slide-active &,
     .swiper-slide-duplicate-active & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s, visibility .3s;
+        transition: opacity 0.3s, visibility 0.3s;
     }
 }
 
@@ -167,11 +201,23 @@
     line-height: 3.2rem;
     letter-spacing: -0.04rem;
     max-width: 40rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        width: 100%;
+        flex-grow: 0;
+        font-weight: 500;
+    }
 }
 
 .success-stories__slider-card-row {
     display: flex;
     justify-content: space-between;
+    @include breakpoint(mobile) {
+        display: block;
+    }
 }
 
 .success-stories__slider-card-info {
@@ -181,6 +227,12 @@
 
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        display: none;
+    }
 
     b {
         font-weight: 700;
@@ -192,15 +244,21 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        opacity: 1;
+        visibility: inherit;
+    }
 
     .swiper-slide-active &,
     .swiper-slide-duplicate-active & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s, visibility .3s;
+        transition: opacity 0.3s, visibility 0.3s;
     }
-
 }
 
 .success-stories__slider-card-stats {
@@ -208,10 +266,22 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        align-items: initial;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
 }
 
 .success-stories__slider-card-stats-item {
     margin-right: 2.6rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -221,9 +291,8 @@
     font-size: 1.4rem;
     line-height: 1.6rem;
     font-weight: 400;
-    margin-bottom: .6rem;
-    color: #A0A7B2;
-
+    margin-bottom: 0.6rem;
+    color: #a0a7b2;
 }
 
 .success-stories__slider-card-stats-item-value {
@@ -246,6 +315,12 @@
     margin-left: 3rem;
     flex-shrink: 0;
     color: white;
+
+    @include breakpoint(mobile) {
+        padding: 1.3rem 2rem;
+        margin: 0;
+        margin-top: 2rem;
+    }
     &:link,
     &:visited {
         color: white;
@@ -261,7 +336,11 @@
     height: 8.8rem;
     z-index: 10;
     pointer-events: none;
-    transition: transform .3s;
+    transition: transform 0.3s;
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+    }
     svg {
         display: block;
         width: 100%;

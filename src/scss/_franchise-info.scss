@@ -5,6 +5,10 @@
     padding-top: 7rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        padding-top: 3.5rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .franchise-info__row {
@@ -12,10 +16,17 @@
     grid-gap: 20px;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3.5rem;
+    }
 }
 
 .franchise-info__block {
     margin-bottom: 7rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -67,8 +78,8 @@
 .franchise-info__block-tag {
     display: inline-flex;
     align-items: center;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: flex-start;
     background: #f0f0f0;
     border-radius: 0.4rem;
     color: var(--text-color);
@@ -149,6 +160,9 @@
     grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
     grid-gap: 1rem;
     align-items: center;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -186,8 +200,11 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    top: -0.25rem;
+    top: -0.3rem;
     margin-left: 0.6rem;
+    @include breakpoint(mobile) {
+        top: -0.3rem;
+    }
     svg {
         width: 2.2rem;
         height: 2.2rem;
@@ -253,12 +270,22 @@
     line-height: 3.2rem;
     letter-spacing: -0.04rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .franchise-info__difference-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 20px;
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .franchise-info__difference-list-item {
@@ -283,6 +310,9 @@
     text-transform: uppercase;
     min-height: 4.4rem;
     margin-bottom: 1.5rem;
+    @include breakpoint(mobile) {
+        min-height: auto;
+    }
 }
 
 .franchise-info__difference-card-text {
@@ -305,6 +335,12 @@
     background-repeat: no-repeat;
     border-radius: 1.2rem;
     margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
 }
 
 .franchise-info__manager-photo-container {
@@ -317,6 +353,13 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 2rem;
+    }
 }
 
 .franchise-info__manager-photo {
@@ -343,7 +386,14 @@
     color: var(--primary-color);
     background-color: #fff;
     padding: 1.5rem 2.2rem;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
+    justify-content: center;
+    text-align: center;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-top: 3.5rem;
+    }
     &:link,
     &:visited {
         color: var(--primary-color);

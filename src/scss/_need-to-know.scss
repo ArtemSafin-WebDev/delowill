@@ -6,6 +6,9 @@
 
 .need-to-know__block {
     margin-bottom: 6.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 5.5rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -17,12 +20,22 @@
     line-height: 3.2rem;
     
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .need-to-know__block-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 20px;
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
 }
 
 .need-to-know__block-list-item {

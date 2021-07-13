@@ -7,6 +7,13 @@
     display: flex;
     align-items: center;
     min-height: 9rem;
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        flex-direction: column;
+        align-items: initial;
+        padding: 3rem 0;
+    }
 }
 
 .page-footer__nav {
@@ -16,6 +23,12 @@
 
     @include breakpoint(small-tablet) {
         margin-right: 5rem;
+        flex-direction: column;
+        align-items: initial;
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
     }
 }
 
@@ -28,6 +41,10 @@
     letter-spacing: 0.15rem;
     transition: color 0.2s;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -43,6 +60,11 @@
     align-items: center;
     margin-right: 4rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 4rem;
+    }
 }
 
 .page-footer__social-list-item {
@@ -76,6 +98,13 @@
     @include breakpoint(small-tablet) {
         display: none;
     }
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin: 0;
+        order: 8;
+        margin-bottom: 2rem;
+    }
 }
 
 .page-footer__policy {
@@ -85,6 +114,11 @@
     margin-right: 9rem;
     @include breakpoint(small-tablet) {
         margin-left: auto;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 2rem;
     }
     &:link,
     &:visited {
@@ -108,6 +142,11 @@
     flex-shrink: 0;
 
     margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        order: 15;
+    }
     img {
         display: block;
         width: 8.8rem;

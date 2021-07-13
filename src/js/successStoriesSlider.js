@@ -10,7 +10,7 @@ export default function successStoriesSlider() {
 
         new Swiper(container, {
             watchOverflow: true,
-            spaceBetween: 30,
+            spaceBetween: 10,
             slidesPerView: 'auto',
             centeredSlides: true,
             loop: true,
@@ -20,6 +20,11 @@ export default function successStoriesSlider() {
             navigation: {
                 nextEl: element.querySelector('.success-stories__slider-arrow--next'),
                 prevEl: element.querySelector('.success-stories__slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 30,
+                }
             }
         });
     });

@@ -2,7 +2,7 @@
 }
 
 .franchise-social__content {
-    background: linear-gradient(96.16deg, #7C88FF -34.71%, #4659FF 118.45%), ;
+    background: linear-gradient(96.16deg, #7c88ff -34.71%, #4659ff 118.45%);
     border-radius: 1.2rem;
     color: white;
     position: relative;
@@ -20,6 +20,9 @@
         position: absolute;
         height: 100%;
         z-index: -1;
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
@@ -27,6 +30,11 @@
     display: flex;
     align-items: center;
     padding: 4.2rem 0;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        padding: 2.5rem;
+    }
 }
 
 .franchise-social__title {
@@ -36,15 +44,35 @@
     font-size: 3.4rem;
     line-height: 4rem;
     letter-spacing: -0.04rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.3;
+        width: 100%;
+
+        flex-grow: 0;
+        margin-bottom: 3.5rem;
+    }
 }
 
 .franchise-social__list {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 1rem;
+        align-items: initial;
+    }
 }
 
 .franchise-social__list-item {
     margin-right: 1rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -58,7 +86,9 @@
     padding: 2rem;
     text-align: center;
     align-items: center;
-
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
     svg {
         width: 2rem;
         height: 2rem;

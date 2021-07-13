@@ -6,4 +6,9 @@
     text-transform: uppercase;
     color: #a0a7b2;
     margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
 }

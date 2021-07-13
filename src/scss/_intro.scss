@@ -32,6 +32,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+   
 }
 
 .intro__content {
@@ -40,6 +42,11 @@
     padding-bottom: 11rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        min-height: 100vh;
+        padding: 8rem 0;
+    }
 }
 
 .intro__top-row {
@@ -126,8 +133,13 @@
 .intro__franchise-logo {
     width: 18rem;
     height: auto;
+   
 
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 14rem;
+    }
 }
 
 .intro__franchise-heading {
@@ -135,12 +147,20 @@
     font-size: 4.6rem;
     line-height: 5.6rem;
     margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        line-height: 1.2;
+    }
 }
 
 .intro__franchise-description {
     font-size: 1.6rem;
     line-height: 2rem;
     margin-bottom: 8rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .intro__franchise-buttons {
@@ -149,6 +169,10 @@
     max-width: 55rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 1.8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .intro__franchise-buttons-col {
@@ -200,4 +224,7 @@
     line-height: 1.6rem;
     margin-top: 1.5rem;
     color: #F0F0F0;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

@@ -1,7 +1,13 @@
 .franchise-block {
     margin: 3.6rem 0;
+    @include breakpoint(mobile) {
+        margin: 3rem 0;
+    }
     &:last-child {
         margin-bottom: 8rem;
+        @include breakpoint(mobile) {
+            margin-bottom: 4rem;
+        }
     }
 }
 
@@ -10,4 +16,7 @@
     border-radius: 1.2rem;
     color: var(--text-color);
     padding: 6rem 4rem;
+    @include breakpoint(mobile) {
+        padding: 2.5rem;
+    }
 }

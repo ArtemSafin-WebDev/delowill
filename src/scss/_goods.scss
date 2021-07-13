@@ -1,13 +1,40 @@
+.goods {
+    .inner-container {
+        @include breakpoint(mobile) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 .goods__top-row {
     margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        display: contents;
+    }
+}
+
+.goods__content {
+    @include breakpoint(mobile) {
+        overflow: hidden;
+    }
 }
 
 .goods__categories {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 }
 
 .goods__categories-link {
@@ -25,6 +52,15 @@
     border: 1px solid #a0a7b2;
     border-radius: 0.4rem;
     color: var(--text-color);
+    flex-shrink: 0;
+    white-space: nowrap;
+    @include breakpoint(mobile) {
+        margin-bottom: .6rem;
+        margin-right: 0.6rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding: 1.2rem 1.6rem;
+    }
     &:link,
     &:visited {
         color: var(--text-color);
@@ -69,6 +105,18 @@
     border-radius: 0.4rem;
     color: var(--primary-color);
 
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding: 1.2rem 1.6rem;
+        margin: 0;
+        margin-top: 2rem;
+        width: 100%;
+        order: 100;
+    }
+
+    
+
     svg {
         fill: currentColor;
         width: 2rem;
@@ -97,6 +145,12 @@
         flex-direction: column;
         width: 33.33%;
     }
+
+    @include breakpoint(mobile) {
+        .swiper-container {
+            overflow: visible;
+        }
+    }
 }
 
 .goods__slider-arrow {
@@ -113,6 +167,10 @@
     transition: background-color .2s, opacity .2s;
     background-color: #F2F2F2;
     z-index: 50;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     &--prev {
         right: 100%;
         margin-right: 6.8rem;
@@ -165,8 +223,7 @@
         padding-bottom: 70%;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &:hover {
         .goods__slider-card-bg {
             // &::before {
             //     opacity: 0;
@@ -253,6 +310,10 @@
     top: 0;
     width: 100%;
     height: 100%;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -283,6 +344,9 @@
     justify-content: flex-end;
     transition: transform 0.5s;
     transform: translateY(100%);
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .goods__slider-card-table {
