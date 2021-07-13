@@ -14,6 +14,10 @@
     --grey-text: #a0a7b2;
     --gotham: 'Gotham Pro Narrow', sans-serif;
     --roboto: 'Roboto', sans-serif;
+
+    @include breakpoint(tablet) {
+        --content-padding: 4rem;
+    }
 }
 
 html {
@@ -236,4 +240,18 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
+}
+
+
+.calculator-placeholder {
+ 
+    margin-bottom: 3.5rem;
+}
+
+.calculator-placeholder__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
 }

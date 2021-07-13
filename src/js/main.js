@@ -12,6 +12,7 @@ import goodsSlider from './goodsSlider';
 import tabs from './tabs';
 import accordions from './accordion';
 import successStoriesSlider from './successStoriesSlider';
+import formatSlider from './formatSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs();
     accordions();
     successStoriesSlider();
+    formatSlider();
 });
 
 window.addEventListener('load', function() {
