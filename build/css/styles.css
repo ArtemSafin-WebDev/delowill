@@ -1017,6 +1017,9 @@ html {
   @media only screen and (max-width: 640px) {
     html {
       font-size: 9px; } }
+  @media only screen and (max-width: 370px) {
+    html {
+      font-size: 8px; } }
 
 body {
   font-size: 1.6rem;
