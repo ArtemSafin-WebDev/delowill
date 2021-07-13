@@ -19,9 +19,11 @@ export default function goodsSlider() {
                 prevEl: element.querySelector('.goods__slider-arrow--prev')
             },
             breakpoints: {
-                slidesPerView: 3,
-                slidesPerColumn: 2,
-                spaceBetween: 20,
+                641: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                    spaceBetween: 20
+                }
             }
         });
     });
