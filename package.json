@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
+    "chart.js": "^3.4.1",
     "choices.js": "^9.0.1",
     "classlist-polyfill": "^1.2.0",
     "core-js": "^3.1.4",
@@ -53,7 +54,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-prettier": "^2.1.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
@@ -63,6 +64,7 @@
     "handlebars-layouts": "^3.1.4",
     "moment-locales-webpack-plugin": "^1.0.7",
     "regenerator-runtime": "^0.13.2",
+    "sass": "^1.35.2",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.1.2",
     "webpack-stream": "^5.2.1"

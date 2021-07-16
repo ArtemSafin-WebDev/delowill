@@ -3619,16 +3619,337 @@
     </div>
 </section>
 
-<div class="calculator-placeholder">
+<section class="franchise-block financial-model js-calculator">
     <div class="container">
-        <img src="img/calculator-placeholder.svg" alt="" class="calculator-placeholder__image">
+        <div class="franchise-block__content">
+            <div class="inner-container">
+                <div class="financial-model__top-row">
+                    <h2 class="financial-model__heading">
+                        Упрощенная<br> финансовая модель
+                    </h2>
+                    <div class="financial-model__detailed-calculation">
+                        <div class="financial-model__detailed-calculation-text">
+                            <p>
+                                Файл будет добавлен в личный кабинет, раздел документы
+                            </p>
+                        </div>
+                        <a href="#" class="financial-model__detailed-calculation-link">
+                            Детальный расчет
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-doc">
+                                <use xlink:href="#doc"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="financial-model__content">
+                    <div class="financial-model__left-col">
+                        <div class="financial-model__calculation">
+                            <h3 class="financial-model__block-heading">
+                                Расчет себестоимости 1 продажа
+                            </h3>
+                            <div class="financial-model__calculated">
+                                <div class="financial-model__calculated-block">
+                                    <div class="financial-model__calculated-block-title">
+                                        Средний чек
+                                    </div>
+                                    <div class="financial-model__calculated-block-amount js-average-bill-calclation">
+                                        350
+                                    </div>
+                                </div>
+                                <svg width="14" height="14" aria-hidden="true" class="icon-multiply">
+                                    <use xlink:href="#multiply"></use>
+                                </svg>
+                                <div class="financial-model__calculated-block">
+                                    <div class="financial-model__calculated-block-title">
+                                        Кол-во продаж
+                                    </div>
+                                    <div class="financial-model__calculated-block-amount js-sales-calclation">
+                                        2 000
+                                    </div>
+                                </div>
+                                <svg width="14" height="14" aria-hidden="true" class="icon-equals">
+                                    <use xlink:href="#equals"></use>
+                                </svg>
+                                <div
+                                    class="financial-model__calculated-block financial-model__calculated-block--filled">
+                                    <div class="financial-model__calculated-block-title">
+                                        Выручка
+                                    </div>
+                                    <div class="financial-model__calculated-block-amount js-total-revenue-calculation">
+                                        700 000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="financial-model__numbers">
+                            <h3 class="financial-model__block-heading">
+                                Расчет себестоимости 1 продажа
+                            </h3>
+                            <form action="/" method="POST" class="financial-model__numbers-form">
+                                <div class="financial-model__numbers-form-tables">
+                                    <div class="financial-model__numbers-form-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+
+                                                    </th>
+                                                    <th>
+                                                        Месяц
+                                                    </th>
+                                                    <th>
+                                                        День
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="selected">
+                                                    <th>
+
+                                                        Доходы
+
+                                                    </th>
+                                                    <td class="js-revenue-month">
+
+                                                        700 000 ₽
+
+                                                    </td>
+                                                    <td class="js-revenue-day">
+
+                                                        23 000 ₽
+
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Кол-во продаж
+                                                    </th>
+                                                    <td>
+                                                        <label class="financial-model__numbers-input-wrapper">
+                                                            <input type="tel"
+                                                                class="js-numeric-input financial-model__numbers-input js-sales-amount-month"
+                                                                name="sales" value="2000">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-pencil">
+                                                                <use xlink:href="#pencil"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </td>
+                                                    <td class="js-sales-amount-day">
+                                                        67
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Средний чек, руб
+                                                    </th>
+                                                    <td>
+                                                        <label class="financial-model__numbers-input-wrapper">
+                                                            <input type="tel"
+                                                                class="js-numeric-input js-average-bill-month financial-model__numbers-input"
+                                                                name="sales" value="350">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-pencil">
+                                                                <use xlink:href="#pencil"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </td>
+                                                    <td class="js-average-bill-day">
+                                                        350
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="financial-model__numbers-form-table">
+                                        <table>
+
+                                            <tbody>
+                                                <tr class="selected">
+                                                    <th>
+
+                                                        Расходы
+
+                                                    </th>
+                                                    <td class="js-expenses-month">
+
+                                                        510 000 ₽
+
+                                                    </td>
+                                                    <td class="js-expenses-day">
+
+                                                        17 400 ₽
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Закуп товара, руб
+                                                    </th>
+                                                    <td class="js-buy-amount-month">
+                                                        350000
+                                                    </td>
+                                                    <td class="js-buy-amount-day">
+                                                        11600
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Аренда, руб
+                                                    </th>
+                                                    <td>
+                                                        <label class="financial-model__numbers-input-wrapper">
+                                                            <input type="tel"
+                                                                class="js-numeric-input js-rent-month financial-model__numbers-input"
+                                                                name="sales" value="60000">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-pencil">
+                                                                <use xlink:href="#pencil"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </td>
+                                                    <td class="js-rent-day">
+                                                        2 000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        З/П, руб
+                                                    </th>
+                                                    <td>
+                                                        <label class="financial-model__numbers-input-wrapper">
+                                                            <input type="tel"
+                                                                class="js-numeric-input js-wage-month financial-model__numbers-input"
+                                                                name="sales" value="190000">
+                                                            <svg width="14" height="14" aria-hidden="true"
+                                                                class="icon-pencil">
+                                                                <use xlink:href="#pencil"></use>
+                                                            </svg>
+                                                        </label>
+                                                    </td>
+                                                    <td class="js-wage-day">
+                                                        1 500
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="financial-model__numbers-form-table">
+                                        <table>
+                                            <tbody>
+                                                <tr class="blue">
+                                                    <th>
+                                                        Прибыль
+                                                    </th>
+                                                    <td class="js-profit-month">
+                                                        190 000 ₽
+                                                    </td>
+                                                    <td class="js-profit-day">
+                                                        6 300 ₽
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="financial-model__right-col">
+                        <div class="financial-model__chart">
+                            <h3 class="financial-model__block-heading">
+                                Диаграмма доходов/расходов
+                            </h3>
+                            <div class="financial-model__chart-row">
+                                <div class="financial-model__chart-graph">
+                                    <div class="js-chart financial-model__chart-graph-element">
+
+                                    </div>
+
+                                </div>
+                                <div class="financial-model__chart-legend">
+                                    <div class="financial-model__chart-legend-item">
+                                        <div class="financial-model__chart-legend-circle"
+                                            style="background-color: #4658FF;">
+
+                                        </div>
+                                        <div class="financial-model__chart-legend-content">
+                                            <h4 class="financial-model__chart-legend-title">
+                                                Прибыль
+                                            </h4>
+                                            <div class="financial-model__chart-legend-price js-chart-profit">
+                                                100 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="financial-model__chart-legend-item">
+                                        <div class="financial-model__chart-legend-circle"
+                                            style="background-color: #C2D0FF;">
+
+                                        </div>
+                                        <div class="financial-model__chart-legend-content">
+                                            <h4 class="financial-model__chart-legend-title">
+                                                Закуп
+                                            </h4>
+                                            <div class="financial-model__chart-legend-price js-chart-buy">
+                                                100 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="financial-model__chart-legend-item">
+                                        <div class="financial-model__chart-legend-circle"
+                                            style="background-color:  #85A0FF;">
+
+                                        </div>
+                                        <div class="financial-model__chart-legend-content">
+                                            <h4 class="financial-model__chart-legend-title">
+                                                Операционные расходы
+
+                                            </h4>
+                                            <div class="financial-model__chart-legend-price js-chart-expenses">
+                                                150 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="financial-model__rental">
+                            <h4 class="financial-model__rental-heading">
+                                График окупаемости
+                            </h4>
+                            <img src="img/graph.svg" alt="" class="financial-model__rental-graph">
+                            <div class="financial-model__parameters">
+                                <div class="financial-model__investments">
+                                    <h4 class="financial-model__investments-title">
+                                        Вложения, руб
+                                    </h4>
+                                    <label class="financial-model__investments-wrapper">
+                                        <input type="tel" class="financial-model__investments-input js-investment" value="300000">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-pencil">
+                                            <use xlink:href="#pencil"></use>
+                                        </svg>
+                                    </label>
+
+                                </div>
+                                <div class="financial-model__payoff">
+                                    <h4 class="financial-model__payoff-heading">
+                                        Окупаемость
+                                    </h4>
+                                    <div class="financial-model__payoff-date js-payment-date">12 мес.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="calculator-placeholder">
-    <div class="container">
-        <img src="img/what-contains.svg" alt="" class="calculator-placeholder__image">
-    </div>
-</div>
+</section>
+
 
 
 <section class="franchise-block geography">

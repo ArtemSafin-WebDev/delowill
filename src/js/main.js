@@ -13,6 +13,7 @@ import tabs from './tabs';
 import accordions from './accordion';
 import successStoriesSlider from './successStoriesSlider';
 import formatSlider from './formatSlider';
+import calculator from './calculator';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     accordions();
     successStoriesSlider();
     formatSlider();
+    calculator();
 });
 
 window.addEventListener('load', function() {
