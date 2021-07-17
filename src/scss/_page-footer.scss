@@ -85,7 +85,10 @@
         height: 2.2rem;
         display: block;
         fill: var(--primary-color);
+        transition: fill .2s;
     }
+
+   
 }
 
 .page-footer__copyright {

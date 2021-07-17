@@ -14,6 +14,8 @@ import accordions from './accordion';
 import successStoriesSlider from './successStoriesSlider';
 import formatSlider from './formatSlider';
 import calculator from './calculator';
+import whatIsIncludedChart from './whatIsIncludedChart';
+import whatIsIncludedAdvancedView from './whatIsIncludedAdvancedView';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -31,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     successStoriesSlider();
     formatSlider();
     calculator();
+    whatIsIncludedChart();
+    whatIsIncludedAdvancedView();
 });
 
 window.addEventListener('load', function() {
