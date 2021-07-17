@@ -16,10 +16,13 @@ import formatSlider from './formatSlider';
 import calculator from './calculator';
 import whatIsIncludedChart from './whatIsIncludedChart';
 import whatIsIncludedAdvancedView from './whatIsIncludedAdvancedView';
+import vhUnits from './vhUnits';
+import mobileReload from './mobileReload';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    vhUnits();
     setScrollbarWidth();
     validation();
     customSelects();
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calculator();
     whatIsIncludedChart();
     whatIsIncludedAdvancedView();
+    // mobileReload();
 });
 
 window.addEventListener('load', function() {

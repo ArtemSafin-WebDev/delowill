@@ -44,7 +44,7 @@
     flex-direction: column;
 
     @include breakpoint(mobile) {
-        min-height: 100vh;
+        min-height: calc(100vh - 8rem);
         padding: 8rem 0;
     }
 }
