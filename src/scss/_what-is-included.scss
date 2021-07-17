@@ -2,11 +2,20 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .what-is-included__content {
     width: 50%;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .what-is-included__link {
@@ -22,6 +31,15 @@
     background-color: var(--primary-color);
     color: white;
     font-family: var(--gotham);
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        order: 12;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-top: 3rem;
+    }
     &:link,
     &:visited {
         color: white;
@@ -36,6 +54,14 @@
     max-width: 50rem;
     margin-bottom: 2.5rem;
 
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
     em {
         font-style: normal;
         color: var(--primary-color);
@@ -46,6 +72,12 @@
     max-width: 80rem;
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 4.5rem;
+    }
 }
 
 .what-is-included__nav {
@@ -55,6 +87,10 @@
     flex-wrap: wrap;
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -75,11 +111,11 @@
     color: var(--text-color);
 
     @include breakpoint(mobile) {
-        margin-bottom: 0.6rem;
-        margin-right: 0.6rem;
-        font-size: 1.4rem;
-        line-height: 1.2;
-        padding: 1.2rem 1.6rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        margin: 0;
+        padding: 1.2rem 0.5rem;
     }
     &:link,
     &:visited {
@@ -137,9 +173,22 @@
     border-radius: 1.2rem;
     padding: 3rem 4rem;
 
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+        box-shadow: none;
+        padding: 0;
+    }
+
     &--inner {
         padding: 3rem;
         grid-gap: 2rem;
+
+        @include breakpoint(mobile) {
+            grid-gap: 3rem;
+            padding: 0;
+        }
     }
 }
 
@@ -278,6 +327,11 @@
     display: grid;
     grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
     grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.5rem;
+    }
 }
 
 .what-is-included__advanced-view-stages {
@@ -291,10 +345,17 @@
     color: #a0a7b2;
     margin-bottom: 3rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .what-is-included__advanced-view-stages-links {
-    position: relative;
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        flex-direction: column;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -304,34 +365,72 @@
         background-color: #f0f0f0;
         height: var(--bar-height, 0);
         z-index: -1;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
 .what-is-included__advanced-view-stages-link {
-    display: flex;
-    align-items: flex-start;
-    font-weight: bold;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: #a0a7b2;
-    margin-bottom: 3rem;
-    transition: color 0.2s;
-    &:link,
-    &:visited {
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        align-items: flex-start;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
         color: #a0a7b2;
+
+        transition: color 0.2s;
+
+        &:link,
+        &:visited {
+            color: #a0a7b2;
+        }
+
+        &.active {
+            color: var(--text-color);
+
+            .what-is-included__advanced-view-stages-link-mark {
+                background-color: var(--primary-color);
+            }
+        }
     }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        padding: 1.5rem 0;
+        transition: color .2s;
+        color: #A0A7B2;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: #F0F0F0;
+            height: 0.5rem;
+            transition: background-color .2s;
+        }
 
-    &.active {
-        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: #A0A7B2;
+        }
 
-        .what-is-included__advanced-view-stages-link-mark {
-            background-color: var(--primary-color);
+        &.active {
+            color: var(--text-color);
+
+            &::before {
+                background-color: var(--primary-color);
+            }
         }
     }
 }
@@ -346,6 +445,10 @@
     margin-top: 0.4rem;
     display: inline-flex;
     transition: background-color 0.2s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .what-is-included__advanced-view-stages-tabs {
@@ -378,6 +481,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .what-is-included__advanced-stage-slider-wrapper {
@@ -472,5 +579,43 @@
         visibility: inherit;
         transition: opacity 0.3s, visibility 0.3s;
         position: relative;
+    }
+}
+
+.what-is-included__stages-links-slider {
+    position: relative;
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        
+
+        @include breakpointMF(small-tablet) {
+            margin-bottom: 3rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            width: 15rem;
+        }
+    }
+}
+
+
+.what-is-included__main-content {
+    @include breakpoint(mobile) {
+        overflow: hidden;
+    }
+}
+
+.what-is-included__advanced-stage-select {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin-bottom: 3.5rem;
     }
 }

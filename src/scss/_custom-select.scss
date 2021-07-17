@@ -14,6 +14,11 @@
         border-radius: 0.4rem;
         background: #f0f0f0;
 
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
+
         &.is-open {
             border-bottom-left-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
@@ -46,6 +51,10 @@
         border-radius: 0.4rem !important;
         transition: border-color 0.2s;
         border: 1px solid transparent;
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
     }
 
     &.parsley-error {
@@ -66,8 +75,8 @@
         top: 50%;
         transform: translateY(-50%);
         background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.41 6.12'%3E%3Cpath d='M0 1.41L1.41 0l3.3 3.29L8 0l1.41 1.41-4.7 4.71z' fill='%234659ff' fill-rule='evenodd'/%3E%3C/svg%3E");
-        width: 14px;
-        height: 7px;
+        width: 1.4rem;
+        height: .7rem;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -77,15 +86,15 @@
     .choices__placeholder {
         opacity: 1;
 
-        color: #1E204A;
+        color: #1e204a;
     }
 
     .choices__list--dropdown {
         word-break: initial;
         border: none;
         // border-top: 1px solid rgba(0, 0, 0, 0.08);
-        background: #FFFFFF;
-        box-shadow: inset 0px 1px 0px #F2F4F8;
+        background: #ffffff;
+        box-shadow: inset 0px 1px 0px #f2f4f8;
 
         border-radius: 0rem !important;
         border-bottom-left-radius: 0.4rem !important;
@@ -97,7 +106,6 @@
         visibility: hidden;
         padding: 0;
 
-       
         &.is-active {
             opacity: 1;
             visibility: visible;
@@ -113,12 +121,16 @@
         min-height: 5.6rem;
         display: flex;
         align-items: center;
-        border-top: 1px solid #F2F4F8;
+        border-top: 1px solid #f2f4f8;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
     }
 
     .choices__list--dropdown .choices__item--selectable.is-highlighted {
-        background: #F2F4F8;
-        
+        background: #f2f4f8;
     }
 
     .choices__list--dropdown .choices__list {
@@ -132,8 +144,8 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #3384FE;
-            border-radius: .3rem;
+            background-color: #3384fe;
+            border-radius: 0.3rem;
         }
 
         &::-webkit-scrollbar-button {

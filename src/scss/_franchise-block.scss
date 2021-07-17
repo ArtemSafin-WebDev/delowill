@@ -2,6 +2,11 @@
     margin: 3.6rem 0;
     @include breakpoint(mobile) {
         margin: 3rem 0;
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+        }
     }
     &:last-child {
         margin-bottom: 8rem;

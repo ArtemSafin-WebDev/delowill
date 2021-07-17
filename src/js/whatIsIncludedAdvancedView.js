@@ -36,8 +36,6 @@ export default function whatIsIncludedAdvancedView() {
 
             const tabs = Array.from(element.querySelectorAll('.what-is-included__advanced-stage-inner-tab'));
 
-            
-
             const setActiveInnerTab = index => {
                 links.forEach(link => link.classList.remove('active'));
                 tabs.forEach(tab => tab.classList.remove('active'));
@@ -64,30 +62,51 @@ export default function whatIsIncludedAdvancedView() {
 
             links.forEach((link, linkIndex) => {
                 link.addEventListener('click', event => {
-
-                   
                     event.preventDefault();
                     setActiveInnerTab(linkIndex);
                 });
             });
+
+            const stagesSelect = element.querySelector('.js-stages-select');
+            stagesSelect.addEventListener('change', event => {
+                // console.log(event.target.value);
+
+                setActiveInnerTab(event.target.value)
+            });
         });
 
-        const calculateBarLength = () => {
-            if (stagesLinks.length < 2) return;
-            const firstMark = stagesLinks[0].querySelector('.what-is-included__advanced-view-stages-link-mark');
-            const lastMark = stagesLinks[stagesLinks.length - 1].querySelector('.what-is-included__advanced-view-stages-link-mark');
+        if (window.matchMedia('(max-width: 640px)').matches) {
+            const stagesSliders = Array.from(element.querySelectorAll('.js-stages-links-slider'));
 
-            const distance = lastMark.getBoundingClientRect().top - firstMark.getBoundingClientRect().top;
+            stagesSliders.forEach(item => {
+                const container = item.querySelector('.swiper-container');
 
-            console.log('Distance', distance);
+                new Swiper(container, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 5,
+                    watchOverflow: true
+                });
+            });
+        }
 
-            firstMark.parentElement.parentElement.style.setProperty('--bar-height', distance + 'px');
-        };
+        if (!window.matchMedia('(max-width: 640px)').matches) {
+            const calculateBarLength = () => {
+                if (stagesLinks.length < 2) return;
+                const firstMark = stagesLinks[0].querySelector('.what-is-included__advanced-view-stages-link-mark');
+                const lastMark = stagesLinks[stagesLinks.length - 1].querySelector('.what-is-included__advanced-view-stages-link-mark');
 
-        window.addEventListener('resize', () => {
+                const distance = lastMark.getBoundingClientRect().top - firstMark.getBoundingClientRect().top;
+
+                console.log('Distance', distance);
+
+                firstMark.parentElement.parentElement.parentElement.style.setProperty('--bar-height', distance + 'px');
+            };
+
+            window.addEventListener('resize', () => {
+                calculateBarLength();
+            });
+
             calculateBarLength();
-        });
-
-        calculateBarLength();
+        }
     });
 }
