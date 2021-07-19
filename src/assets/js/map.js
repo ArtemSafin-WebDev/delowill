@@ -6,9 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function initWhereToBuy() {
             console.log('Initializing points map');
-            var pin = {
+            const pin = {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/pin.svg',
+                iconImageSize: [23, 23],
+                iconImageOffset: [-11.5, -11.5]
+            };
+
+            const bluePin = {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/pin-blue.svg',
                 iconImageSize: [23, 23],
                 iconImageOffset: [-11.5, -11.5]
             };
@@ -18,45 +25,153 @@ document.addEventListener('DOMContentLoaded', function() {
             var pointsMapData = [
                 {
                     coords: [55.831082, 49.079644],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: false,
+                    content: `
+                        <div class="geography__popover-content">
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Адрес
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    ул. Декабристов, 131Е
+                                </div>
+                            </div>
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Оборот
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    500 000 ₽
+                                </div>
+                            </div>
+                            <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                        </div>
+                    `
                 },
                 {
                     coords: [55.815159, 49.101276],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: true,
+                    content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                    </div>
+                `
                 },
                 {
                     coords: [55.812957, 49.183735],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: false,
+                    content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                    </div>
+                `
                 },
                 {
                     coords: [55.79474, 49.114071],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: false,
+                    content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                    </div>
+                `
                 },
                 {
                     coords: [55.833308, 49.132141],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: true,
+                    content: `
+                        <div class="geography__popover-content">
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Адрес
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    ул. Декабристов, 131Е
+                                </div>
+                            </div>
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Оборот
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    500 000 ₽
+                                </div>
+                            </div>
+                            <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                        </div>
+                    `
                 },
                 {
                     coords: [55.776266, 49.140724],
-                    title: 'Альфа-Авто',
-                    content: `Россия, Адлер, ул. Авиационная, 34/3
-                    Пн-Сб с 9:00 до 19:00. Вс: выходной
-                    +7 (862) 291 48 48`
+                    open: false,
+                    content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
+                    </div>
+                `
                 }
             ];
 
@@ -76,16 +191,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             mapInstance.controls.add(zoomControl);
-            
-            
-            
 
             var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 '<div class="popover top">' +
-                    `<a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 329"><path fill="#fff" d="M194.64,164.77,322.75,36.66A21.31,21.31,0,0,0,292.61,6.52L164.5,134.63,36.39,6.52A21.31,21.31,0,0,0,6.25,36.66L134.36,164.77,6.25,292.88A21.31,21.31,0,0,0,36.39,323L164.5,194.91,292.61,323a21.31,21.31,0,0,0,30.14-30.14Z" /></svg></a>` +
+                    `<a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 329"><path fill="#4659FF" d="M194.64,164.77,322.75,36.66A21.31,21.31,0,0,0,292.61,6.52L164.5,134.63,36.39,6.52A21.31,21.31,0,0,0,6.25,36.66L134.36,164.77,6.25,292.88A21.31,21.31,0,0,0,36.39,323L164.5,194.91,292.61,323a21.31,21.31,0,0,0,30.14-30.14Z" /></svg></a>` +
                     '<div class="arrow"></div>' +
                     '<div class="popover-inner">' +
-                    '$[[options.contentLayout observeSize minWidth=235 maxWidth=300 maxHeight=450]]' +
+                    '$[[options.contentLayout observeSize minWidth=235 maxWidth=270 maxHeight=450]]' +
                     '</div>' +
                     '</div>',
                 {
@@ -199,22 +311,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             );
             // Создание вложенного макета содержимого балуна.
-            var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<h3 class="popover-title">$[properties.balloonHeader]</h3>' + '<div class="popover-content">$[properties.balloonContent]</div>'
-            );
+            var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass('<div class="popover-content">$[properties.balloonContent]</div>');
 
             var objectManager = new ymaps.ObjectManager({
                 clusterize: true,
+                gridSize: 128,
                 clusterHasBalloon: false,
-                geoObjectOpenBalloonOnClick: false,
-                // clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="clusterIcon">{{ properties.geoObjects.length }}</div>'),
-               
-                // clusterIconShape: {
-                //     type: 'Circle',
-                //     coordinates: [14, 14],
-                //     radius: 14
-                // }
-                
+                geoObjectOpenBalloonOnClick: true,
+                clusterIconLayout: ymaps.templateLayoutFactory.createClass(`<div class="clusterIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13">
+                        <path
+                            d="M14,6.5a.62.62,0,0,1-.64.59H7.64v5.32a.64.64,0,0,1-1.28,0V7.09H.64a.59.59,0,1,1,0-1.18H6.36V.59a.64.64,0,0,1,1.28,0V5.91h5.72A.62.62,0,0,1,14,6.5Z" />
+                    </svg>
+                </div>`),
+
+                clusterIconShape: {
+                    type: 'Circle',
+                    coordinates: [19, 19],
+                    radius: 19
+                }
             });
             mapInstance.geoObjects.add(objectManager);
 
@@ -240,8 +355,49 @@ document.addEventListener('DOMContentLoaded', function() {
                         balloonHeader: item.title
                     }
                 };
+
+                if (!item.open) {
+                    objectToAdd.options = {
+                        ...objectToAdd.options,
+                        ...bluePin
+                    };
+                }
                 objectManager.add(objectToAdd);
             });
+
+            const cityLinks = Array.from(document.querySelectorAll('.geography__city'));
+
+            cityLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+
+                    const coords = link.getAttribute('data-coords');
+
+                    if (!coords.trim()) return;
+
+                    const parsedCoords = coords.split(',').map(item => Number(item));
+
+                    console.log('Coords', parsedCoords);
+
+                    mapInstance.setCenter(parsedCoords);
+                });
+            });
+
+            const mapCitySelect = document.querySelector('.js-map-city-select');
+
+            if (mapCitySelect) {
+                mapCitySelect.addEventListener('change', event => {
+                    const coords = event.target.value;
+
+                    if (!coords.trim()) return;
+
+                    const parsedCoords = coords.split(',').map(item => Number(item));
+
+                    console.log('Coords select', parsedCoords);
+
+                    mapInstance.setCenter(parsedCoords);
+                })
+            }
         }
     });
 });

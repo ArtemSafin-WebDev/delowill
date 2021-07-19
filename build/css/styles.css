@@ -4941,6 +4941,108 @@ select:-webkit-autofill:focus {
   background-color: lightgrey;
 }
 
+.clusterIcon {
+  background: #4659ff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+.clusterIcon svg {
+  fill: rgba(255, 255, 255, 0.6);
+  width: 14px;
+  height: 14px;
+}
+
+.popover {
+  position: absolute;
+  z-index: 1010;
+  text-align: left;
+  white-space: normal;
+}
+
+.popover-inner > * {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem;
+  padding: 2.4rem;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.close svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+.geography__popover-content-info-block {
+  margin-bottom: 2rem;
+}
+.geography__popover-content-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.geography__popover-content-info-block-heading {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #a0a7b2;
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+
+.geography__popover-content-info-block-text {
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.geography__popover-content-info-block-link {
+  padding: 1.2rem 1.6rem;
+  color: white;
+  background-color: var(--primary-color);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.4rem;
+  font-family: var(--gotham);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.geography__popover-content-info-block-link:link, .geography__popover-content-info-block-link:visited {
+  color: white;
+}
+
 .custom-select {
   text-align: left;
 }

@@ -153,7 +153,7 @@
     user-select: none;
 
     @include breakpoint(mobile) {
-        padding: .6rem 1.2rem;
+        padding: 0.6rem 1.2rem;
     }
     .no-touch &:hover,
     .touch &:active {
@@ -205,4 +205,105 @@
     width: 100%;
     height: 100%;
     background-color: lightgrey;
+}
+
+.clusterIcon {
+    background: #4659ff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+
+    svg {
+        fill: rgba(white, 0.6);
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.popover {
+    position: absolute;
+    z-index: 1010;
+
+    text-align: left;
+    white-space: normal;
+}
+
+.popover.top {
+}
+
+.popover-inner {
+    & > * {
+        // width: auto !important;
+        // height: auto !important;
+
+        background: #ffffff;
+        box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.4rem;
+        padding: 2.4rem;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+}
+
+.geography__popover-content {
+}
+
+.geography__popover-content-info-block {
+    margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.geography__popover-content-info-block-heading {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #a0a7b2;
+    margin-bottom: .6rem;
+    font-weight: 400;
+}
+
+.geography__popover-content-info-block-text {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+
+.geography__popover-content-info-block-link {
+    padding: 1.2rem 1.6rem;
+    color: white;
+    background-color: var(--primary-color);
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+    font-family: var(--gotham);
+    align-self: flex-start;
+    &:link,
+    &:visited {
+        color: white;
+    }
 }
