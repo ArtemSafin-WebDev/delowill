@@ -1,7 +1,7 @@
 .franchise-block {
-    margin: 3.6rem 0;
+    margin-bottom: 3.6rem;
     @include breakpoint(mobile) {
-        margin: 3rem 0;
+        margin-bottom: 3rem;
 
         .inner-container {
             display: flex;

@@ -1,0 +1,94 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="registration">
+    <div class="container">
+        <div class="registration__content">
+            <div class="inner-container">
+                <div class="registration__row">
+                    <div class="registration__col">
+                        <h1 class="registration__heading">
+                            Регистрация управляющей компании
+                        </h1>
+                        <div class="registration__text">
+                            <p>
+                                Это займет 2 минуты
+                            </p>
+                        </div>
+                        <div class="registration__video">
+                            <a href="#" class="registration__video-link">
+                                <div class="registration__video-container">
+                                    <img src="img/registration-video-2.jpg" alt=""
+                                        class="registration__video-preview-image">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-play-dark">
+                                        <use xlink:href="#play-dark"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="registration__video-title">
+                                    Функции личного кабинета
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="registration__col">
+                        <div class="registration__card">
+
+
+                            <form action="/" method="POST" class="registration__form" data-need-validation="">
+                                <div class="registration__form-number">
+
+                                    <div class="registration__form-number-input-wrapper">
+                                        <input type="tel" class="registration__form-number-input js-numeric-input"
+                                            required data-parsley-errors-container=".registration__form"
+                                            placeholder="Код из смс">
+                                    </div>
+                                </div>
+                                <div class="registration__form-countdown">
+                                    Получить новый код <a>через 55 сек</a>
+                                </div>
+
+                            </form>
+                            <div class="registration__social">
+                                <h3 class="registration__social-heading">
+                                    или через соцсети
+                                </h3>
+                                <div class="registration__social-links">
+                                    <a href="#" class="registration__social-link" style="background-color: #4497CF;">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-fb">
+                                            <use xlink:href="#fb"></use>
+                                        </svg>
+                                        Facebook
+                                    </a>
+                                    <a href="#" class="registration__social-link" style="background-color: #689DF6;">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-google">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                        Google
+                                    </a>
+                                    <a href="#" class="registration__social-link" style="background-color: #749AC6;">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                        Вконтакте
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="registration__no-account">
+                                Нет аккаунта? <a href="#">
+                                    Зарегистрироваться
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{{/content}}
+{{/extend}}
