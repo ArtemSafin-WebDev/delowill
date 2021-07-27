@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Логин
+        Личный кабинет
     </title>
 </head>
 
@@ -90,68 +90,239 @@
             </div>
         </header>        <main class="page-main">
 
-<section class="registration">
+
+
+
+<section class="account">
+    <div class="account__nav">
+        <div class="container">
+            <div class="account__nav-row">
+                <div class="account__nav-links">
+                    <a href="#" class="account__nav-link active">
+                        мой профиль
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        мои франшизы
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        чат
+                        <span class="account__nav-link-notifications">
+                            <span class="account__nav-link-notifications-text">
+                                3
+                            </span>
+
+                        </span>
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        уведомления
+                        <span class="account__nav-link-notifications">
+
+                            <span class="account__nav-link-notifications-text">
+                                4
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        документы
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        настройки
+                    </a>
+                </div>
+
+                <a href="#" class="account__logout-link">
+                    выйти
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="registration__content">
-            <div class="inner-container">
-                <div class="registration__login">
-                    <h1 class="registration__login-heading">
-                        Вход в Delowill
-                    </h1>
-                    <form action="/" method="POST" class="registration__login-form">
-                        <div class="registration__login-form-input-wrapper">
-                            <input type="text" class="registration__login-form-input" placeholder="E-mail или телефон"
-                                required>
-                        </div>
-                        <div class="registration__login-form-input-wrapper">
-                            <input type="password" class="registration__login-form-input" placeholder="Пароль" required>
-                        </div>
-                        <a href="#" class="registration__login-form-remember">
-                            Забыли пароль?
-                        </a>
-                        <button type="submit" class="registration__login-form-submit">
 
-                            Войти
-                        </button>
+        <div class="inner-container">
+            <div class="account__info">
+                <h1 class="account__heading">
+                    Мой профиль
+                </h1>
+                <div class="account__row">
+                    <form method="POST" action="/" class="account__data-form" data-need-validation="">
+                        <div class="account__block">
+                            <h2 class="account__block-heading">
+                                персональные данные
+                            </h2>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Название компании
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="text" class="account__block-input" name="company-name" required>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    ФИО
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="text" name="name" class="account__block-input" required>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Город
+                                </div>
+                                <div class="account__block-select">
+                                    <select name="city" class="js-custom-select">
+                                        <option value="Казань">Казань</option>
+                                        <option value="Москва">Москва</option>
+                                    </select>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Дата рождения
+                                </div>
+                                <div class="account__block-input-wrapper" id="picker-container">
+                                    <input type="tel"
+                                        class="account__block-input account__block-input--date js-datepicker" required
+                                        readonly>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    О компании
+                                </div>
+                                <div class="account__block-select">
+
+                                    <textarea name="comment" class="account__block-input"></textarea>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="account__block">
+                            <h2 class="account__block-heading">
+                                Данные аккаунта
+                            </h2>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Телефон
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="tel" class="account__block-input js-phone-input" name="phone"
+                                        data-parsley-phone="">
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    E-mail
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="email" class="account__block-input" name="email" required>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Пароль
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="password" class="account__block-input" name="password" required>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Повторите пароль
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="password" class="account__block-input" name="password-confirmation"
+                                        required>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="account__legend">
+                            — Обязательные поля для заполнения
+                        </div>
+
+                        <div class="account__controls">
+                            <label class="account__checkbox">
+                                <input type="checkbox" name="policy" checked class="account__checkbox-input">
+                                <span class="account__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="account__checkbox-text">
+                                    Согласие на обработку <a href="#">
+                                        персональных данных
+                                    </a>
+                                </span>
+                            </label>
+
+                            <button class="account__submit" type="submit">
+                                Сохранить
+                            </button>
+                        </div>
                     </form>
-                    <div class="registration__social">
-                        <h3 class="registration__social-heading">
-                            или через соцсети
-                        </h3>
-                        <div class="registration__social-links">
-                            <a href="#" class="registration__social-link" style="background-color: #4497CF;">
-                                <svg width="14" height="14" aria-hidden="true" class="icon-fb">
-                                    <use xlink:href="#fb"></use>
-                                </svg>
-                                Facebook
-                            </a>
-                            <a href="#" class="registration__social-link" style="background-color: #689DF6;">
-                                <svg width="14" height="14" aria-hidden="true" class="icon-google">
-                                    <use xlink:href="#google"></use>
-                                </svg>
-                                Google
-                            </a>
-                            <a href="#" class="registration__social-link" style="background-color: #749AC6;">
-                                <svg width="14" height="14" aria-hidden="true" class="icon-vk">
-                                    <use xlink:href="#vk"></use>
-                                </svg>
-                                Вконтакте
-                            </a>
+                    <form method="POST" action="/" class="account__inn-form" data-need-validation="">
+                        <div class="account__block">
+                            <h2 class="account__block-heading">
+                                ИНН
+                            </h2>
+                            <div class="account__block-inn-input-wrapper">
+                                <input type="tel"
+                                    class="account__block-input account__block-input--inn js-numeric-input" name="inn"
+                                    required>
+                                <div class="account__block-inn-details">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                                        <use xlink:href="#info"></use>
+                                    </svg>
+                                    <div class="account__block-inn-details-dropdown">
+                                        <div class="account__block-inn-details-dropdown-inner">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa ut magnam
+                                            nobis, quibusdam aperiam.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account__block-inn-text">
+                                <p>
+                                    Для получения доступа ко всем функциям личного кабинета небходимо пройти верификацию
+                                    ИНН
+                                </p>
+                            </div>
+                            <button class="account__block-inn-submit" type="submit">
+                                Пройти верификацию
+                            </button>
                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</section>
+
+
+<section class="add-franchise">
+    <div class="container">
+        <div class="inner-container">
+            <div class="add-franchise__row">
+                <div class="add-franchise__col">
+                    <h2 class="add-franchise__heading">
+                        Добавьте франшизу
+                    </h2>
+                    <div class="add-franchise__text">
+                        <p>
+                            Для получения доступа ко всем функциям личного кабинета небходимо пройти верификацию ИНН
+                        </p>
                     </div>
-                    <div class="registration__no-account">
-                        Нет аккаунта? <a href="#">
-                            Зарегистрироваться
-                        </a>
-                    </div>
+                    <a href="#" class="add-franchise__link">
+                        Добавить франшизу
+                    </a>
+                </div>
+                <div class="add-franchise__col">
+                    <img src="img/add-franchise.svg" alt="" class="add-franchise__image">
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
         </main>
         <footer class="page-footer">
