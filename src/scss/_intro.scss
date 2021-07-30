@@ -42,7 +42,9 @@
 
     @include breakpoint(mobile) {
         min-height: calc(100vh - 8rem);
+        min-height: 30rem;
         padding: 8rem 0;
+        
     }
 }
 
