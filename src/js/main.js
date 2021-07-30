@@ -19,6 +19,7 @@ import whatIsIncludedAdvancedView from './whatIsIncludedAdvancedView';
 import vhUnits from './vhUnits';
 import mobileReload from './mobileReload';
 import datepicker from './datepicker';
+import format from './format';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     whatIsIncludedChart();
     whatIsIncludedAdvancedView();
     datepicker();
+    format();
     // mobileReload();
 });
 

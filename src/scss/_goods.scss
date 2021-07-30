@@ -32,7 +32,9 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: -1rem;
     @include breakpoint(mobile) {
+        margin: 0;
         margin-bottom: 2rem;
     }
 }
@@ -46,7 +48,8 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-family: var(--gotham);
-    margin-right: 1.3rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
     transition: border-color 0.2s, background-color 0.2s, color 0.2s;
     padding: 1.3rem 2.2rem;
     border: 1px solid #a0a7b2;
@@ -351,6 +354,9 @@
 
 .goods__slider-card-table {
     margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
     table {
         display: block;
 

@@ -1,0 +1,86 @@
+.what-is-next__content {
+    background: linear-gradient(-96.16deg, #7c88ff -34.71%, #4659ff 118.45%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    color: white;
+
+    &--darker {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(-96.16deg, #7C88FF -34.71%, #4659FF 118.45%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+}
+
+.what-is-next__heading {
+    font-weight: bold;
+    font-size: 3.4rem;
+    line-height: 4rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 4rem;
+}
+
+.what-is-next__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 29rem);
+    grid-column-gap: 12rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.what-is-next__text {
+    position: relative;
+    padding-left: 4.5rem;
+    font-size: 2rem;
+    line-height: 130%;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: .2rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}
+
+.what-is-next__link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    border-radius: 0.4rem;
+    color: var(--primary-color);
+    padding: 1.5rem 2.5rem;
+    font-family: var(--gotham);
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .what-is-next__link-icon {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.what-is-next__link-icon {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: transparent;
+    transition: color 0.2s;
+    margin-left: 1.4rem;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: var(--primary-color);
+    }
+}

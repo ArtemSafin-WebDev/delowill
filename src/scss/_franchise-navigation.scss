@@ -1,0 +1,145 @@
+.franchise-navigation {
+    padding: 2rem 0;
+}
+
+.franchise-navigation__panel {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    padding: 1.5rem 0;
+    justify-content: center;
+}
+
+.franchise-navigation__links {
+    // width: 50%;
+    // flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.franchise-navigation__link {
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #a0a7b2;
+    margin-right: 5rem;
+
+    &:link,
+    &:visited {
+        color: #a0a7b2;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+
+    &.active {
+        color: var(--text-color);
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.franchise-navigation__contact-link {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.9rem 1.4rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #39b833;
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 6rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.franchise-navigation__more {
+    position: relative;
+
+    &:hover {
+
+        .franchise-navigation__btn {
+            color: var(--text-color);
+        }
+        .franchise-navigation__more-dropdown {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
+}
+
+.franchise-navigation__btn {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #a0a7b2;
+    transition: color .2s;
+    svg {
+        width: 1.8rem;
+        height: 0.4rem;
+        flex-shrink: 0;
+        margin-left: 1.1rem;
+        fill: currentColor;
+    }
+
+    
+}
+
+.franchise-navigation__more-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    
+    width: max-content;
+    max-width: 23rem;
+    padding-top: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 30;
+    transition: opacity .3s, visibility 0s linear .3s;
+}
+
+.franchise-navigation__more-dropdown-inner {
+    border-radius: 0.4rem;
+    background-color: #fff;
+    color: var(--text-color);
+    padding: 1.5rem;
+    box-shadow: 0 0 1rem rgba(black, 0.1);
+}
+
+.franchise-navigation__more-dropdown-link {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
