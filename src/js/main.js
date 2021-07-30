@@ -20,6 +20,7 @@ import vhUnits from './vhUnits';
 import mobileReload from './mobileReload';
 import datepicker from './datepicker';
 import format from './format';
+import anchorLinks from './anchorLinks';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     whatIsIncludedAdvancedView();
     datepicker();
     format();
+    anchorLinks();
     // mobileReload();
 });
 
