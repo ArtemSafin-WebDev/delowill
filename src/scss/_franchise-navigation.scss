@@ -1,13 +1,19 @@
 .franchise-navigation {
     padding: 2rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .franchise-navigation__panel {
-    display: flex;
-    align-items: center;
-    transition: background-color 0.2s;
-    padding: 1.5rem 0;
-    justify-content: center;
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s;
+        padding: 1.5rem 0;
+        justify-content: center;
+    }
 }
 
 .franchise-navigation__links {
@@ -15,6 +21,21 @@
     // flex-grow: 1;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        padding: 2.5rem var(--content-padding);
+        margin: 0 calc(-1 * var(--content-padding));
+
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            width: 1px;
+            height: 1px;
+        }
+    }
 }
 
 .franchise-navigation__link {
@@ -26,6 +47,10 @@
     text-transform: uppercase;
     color: #a0a7b2;
     margin-right: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 3rem;
+    }
 
     &:link,
     &:visited {
@@ -63,6 +88,10 @@
     text-transform: uppercase;
     font-weight: 700;
     margin-left: 6rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     &:link,
     &:visited {
         color: white;
@@ -70,19 +99,25 @@
 }
 
 .franchise-navigation__more {
-    position: relative;
-
-    &:hover {
-
-        .franchise-navigation__btn {
-            color: var(--text-color);
-        }
-        .franchise-navigation__more-dropdown {
-            opacity: 1;
-            visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+   
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+    @include breakpointMF(small-tablet) {
+        position: relative;
+        &:hover {
+            .franchise-navigation__btn {
+                color: var(--text-color);
+            }
+            .franchise-navigation__more-dropdown {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
         }
     }
+
+   
 }
 
 .franchise-navigation__btn {
@@ -94,7 +129,11 @@
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     color: #a0a7b2;
-    transition: color .2s;
+    transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     svg {
         width: 1.8rem;
         height: 0.4rem;
@@ -102,44 +141,90 @@
         margin-left: 1.1rem;
         fill: currentColor;
     }
-
-    
 }
 
 .franchise-navigation__more-dropdown {
-    position: absolute;
-    right: 0;
-    top: 100%;
     
-    width: max-content;
-    max-width: 23rem;
-    padding-top: 1rem;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 30;
-    transition: opacity .3s, visibility 0s linear .3s;
+
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        right: 0;
+        top: 100%;
+    
+        width: max-content;
+        max-width: 23rem;
+        padding-top: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 30;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .franchise-navigation__more-dropdown-inner {
-    border-radius: 0.4rem;
-    background-color: #fff;
-    color: var(--text-color);
-    padding: 1.5rem;
-    box-shadow: 0 0 1rem rgba(black, 0.1);
+   
+
+    @include breakpointMF(small-tablet) {
+        border-radius: 0.4rem;
+        background-color: #fff;
+        color: var(--text-color);
+        padding: 1.5rem;
+        box-shadow: 0 0 1rem rgba(black, 0.1);
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .franchise-navigation__more-dropdown-link {
-    display: block;
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
-    line-height: 1.2;
+
+    @include breakpointMF(small-tablet) {
+        display: block;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
     
-    &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--primary-color);
+        }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        color: var(--primary-color);
+    @include breakpoint(mobile) {
+        flex-shrink: 0;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: #a0a7b2;
+        margin-right: 3rem;
+
+        &:link,
+        &:visited {
+            color: #a0a7b2;
+        }
+    
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--text-color);
+        }
+    
+        &.active {
+            color: var(--text-color);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
     }
+   
 }

@@ -308,6 +308,10 @@
     margin-right: 6.4rem;
     align-self: center;
 
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);

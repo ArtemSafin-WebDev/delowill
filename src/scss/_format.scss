@@ -5,6 +5,11 @@
     display: grid;
     grid-column-gap: 8rem;
     grid-template-columns: minmax(0, 1fr) minmax(0, 48rem);
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
 }
 
 .format__categories {
@@ -14,7 +19,7 @@
     flex-wrap: wrap;
     margin-top: -1rem;
     @include breakpoint(mobile) {
-        margin: 0;
+        margin-top: -0.6rem;
         margin-bottom: 3rem;
     }
 }
@@ -25,12 +30,24 @@
     line-height: 3.2rem;
     letter-spacing: -0.04rem;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .format__specs-table {
     border-top: 0.4rem solid #e4e6f9;
     border-bottom: 0.4rem solid #e4e6f9;
     padding: 5rem 0;
+
+    @include breakpoint(mobile) {
+        border-top: 0.3rem solid #e4e6f9;
+        border-bottom: 0.3rem solid #e4e6f9;
+        padding: 2.5rem 0;
+    }
 
     table {
         display: block;
@@ -48,6 +65,12 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
             grid-gap: 2.5rem;
             margin-bottom: 2rem;
+
+            @include breakpoint(mobile) {
+                grid-gap: .5rem;
+                margin-bottom: 1.5rem;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -57,6 +80,10 @@
         td {
             font-size: 1.8rem;
             line-height: 1.2;
+
+            @include breakpoint(mobile) {
+                font-size: 1.6rem;
+            }
         }
 
         td {
@@ -83,7 +110,7 @@
     color: var(--text-color);
 
     @include breakpoint(mobile) {
-        margin-bottom: 0.6rem;
+        margin-top: 0.6rem;
         margin-right: 0.6rem;
         font-size: 1.4rem;
         line-height: 1.2;
@@ -235,6 +262,11 @@
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        left: 2rem;
+        bottom: 2rem;
+    }
 }
 
 .format__slider-block {
@@ -248,11 +280,21 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 3.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
 }
 
 .format__info-block {
-    &:first-child {
-        grid-column: span 2;
+    
+
+    @include breakpointMF(small-tablet) {
+        &:first-child {
+            grid-column: span 2;
+        }
     }
 }
 
@@ -267,4 +309,8 @@
     font-weight: 500;
     font-size: 1.9rem;
     line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 1.7rem;
+    }
 }
