@@ -32,7 +32,7 @@
         &::after {
             content: '';
             flex-shrink: 0;
-            width: 1px;
+            width: var(--content-padding);
             height: 1px;
         }
     }
@@ -48,8 +48,13 @@
     color: #a0a7b2;
     margin-right: 5rem;
 
+    &:last-child {
+        margin-right: 0;
+    }
+
     @include breakpoint(mobile) {
         margin-right: 3rem;
+       
     }
 
     &:link,
@@ -65,9 +70,7 @@
     &.active {
         color: var(--text-color);
     }
-    &:last-child {
-        margin-right: 0;
-    }
+   
 }
 
 .franchise-navigation__contact-link {
@@ -218,13 +221,15 @@
         .touch &:active {
             color: var(--text-color);
         }
+
+        &:last-child {
+            margin-right: 0;
+        }
     
         &.active {
             color: var(--text-color);
         }
-        &:last-child {
-            margin-right: 0;
-        }
+       
     }
    
 }
