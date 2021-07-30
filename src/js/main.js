@@ -22,6 +22,8 @@ import datepicker from './datepicker';
 import format from './format';
 import anchorLinks from './anchorLinks';
 import modals from './modals';
+import franchiseMenu from './franchiseMenu';
+import sectionsMenu from './sectionsMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -46,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     format();
     anchorLinks();
     modals();
+    franchiseMenu();
+    sectionsMenu();
     // mobileReload();
 });
 

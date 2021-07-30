@@ -9,6 +9,8 @@ export default function anchorLinks() {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
             const hash = link.hash;
 
+            console.log('Hash', hash)
+
             if (hash && hash.startsWith('#to-')) {
                 event.preventDefault();
 
@@ -26,9 +28,11 @@ export default function anchorLinks() {
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: false,
-                            offsetY: 0
+                            offsetY: 80
                         }
                     });
+                } else {
+                    console.error('No element to scroll')
                 }
             }
         }
