@@ -9,7 +9,7 @@
         margin-top: 0.8rem;
         font-size: 1.4rem;
         line-height: 1.2;
-        color: #eb5757;
+        color: var(--primary-color);
     }
 }
 
@@ -572,6 +572,10 @@ textarea.account__block-input {
     align-items: center;
     cursor: pointer;
     user-select: none;
+
+    .parsley-errors-list.filled {
+        display: none;
+    }
 }
 
 .account__checkbox-input {
@@ -588,8 +592,13 @@ textarea.account__block-input {
     align-items: center;
     justify-content: center;
     background-color: white;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color .2s;
     border-radius: 0.2rem;
+    border: 1px solid white;
+
+    .parsley-error & {
+        border-color: #EB5757;
+    }
     svg {
         width: 1.2rem;
         height: 1.2rem;

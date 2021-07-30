@@ -1,0 +1,205 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(black, 0.7);
+    z-index: 700;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem var(--content-padding);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &:not(.active) {
+        right: calc(-1 * var(--sb-width, 0));
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+       
+    }
+}
+
+.modal__inner {
+    margin: auto;
+    width: 100%;
+    max-width: 50rem;
+    padding: 4.2rem;
+    border-radius: 1.2rem;
+    color: var(--text-color);
+    background-color: #fff;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+    }
+}
+
+.modal__close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    z-index: 30;
+    @include breakpoint(mobile) {
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        fill: #afc2df;
+        transition: fill 0.2s;
+        @include breakpoint(mobile) {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.modal__form-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    letter-spacing: -0.04rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.modal__form-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    .parsley-errors-list.filled {
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-top: 1.2rem;
+    }
+}
+
+.modal__form-input {
+    height: 6.7rem;
+    background: #f5f5f5;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    padding: 0 2.5rem;
+    @include placeholder {
+        color: #a0a7b2;
+    }
+}
+
+textarea.modal__form-input {
+    resize: none;
+    display: block;
+    height: 16rem;
+    appearance: none;
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
+}
+
+.modal__form-checkbox {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    .parsley-errors-list {
+        display: none;
+    }
+}
+
+.modal__form-checkbox-input {
+    display: none;
+}
+
+.modal__form-checkbox-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    margin-right: 1.3rem;
+    background: #f5f5f5;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s, border-color .2s;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f5f5f5;
+
+    .parsley-error & {
+        border-color: #EB5757;
+    }
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        fill: white;
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.modal__form-checkbox-text {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #a0a7b2;
+
+    a {
+        color: var(--primary-color);
+        text-decoration: underline;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration: none;
+        }
+    }
+}
+
+.modal__form-checkbox-input:checked ~ .modal__form-checkbox-mark {
+    background-color: var(--primary-color);
+    svg {
+        opacity: 1;
+    }
+}
+
+.modal__form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.8rem 6rem;
+    background: #4659ff;
+    border-radius: 0.4rem;
+    color: white;
+    font-family: var(--gotham);
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+}

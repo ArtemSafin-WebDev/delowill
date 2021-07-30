@@ -7947,7 +7947,7 @@ select:-webkit-autofill:focus {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   line-height: 1.2;
-  color: #eb5757;
+  color: var(--primary-color);
 }
 
 .account__heading {
@@ -8565,6 +8565,9 @@ textarea.account__block-input {
       -ms-user-select: none;
           user-select: none;
 }
+.account__checkbox .parsley-errors-list.filled {
+  display: none;
+}
 
 .account__checkbox-input {
   display: none;
@@ -8590,9 +8593,13 @@ textarea.account__block-input {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: white;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
   border-radius: 0.2rem;
+  border: 1px solid white;
+}
+.parsley-error .account__checkbox-mark {
+  border-color: #EB5757;
 }
 .account__checkbox-mark svg {
   width: 1.2rem;
@@ -9483,4 +9490,244 @@ textarea.account__block-input {
   margin-top: -0.65rem;
   top: 0;
   margin-left: -1rem;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem var(--content-padding);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+}
+.modal:not(.active) {
+  right: calc(-1 * var(--sb-width, 0));
+}
+.modal.active {
+  opacity: 1;
+  visibility: inherit;
+  -webkit-transition: opacity 0.4s, visibility 0.4s;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal__inner {
+  margin: auto;
+  width: 100%;
+  max-width: 50rem;
+  padding: 4.2rem;
+  border-radius: 1.2rem;
+  color: var(--text-color);
+  background-color: #fff;
+  position: relative;
+}
+@media only screen and (max-width: 640px) {
+  .modal__inner {
+    padding: 3rem;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  z-index: 30;
+}
+@media only screen and (max-width: 640px) {
+  .modal__close {
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+}
+.modal__close svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  fill: #afc2df;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+@media only screen and (max-width: 640px) {
+  .modal__close svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.no-touch .modal__close:hover svg, .touch .modal__close:active svg {
+  fill: var(--primary-color);
+}
+
+.modal__form-title {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.04rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.modal__form-title:last-child {
+  margin-bottom: 0;
+}
+
+.modal__form-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.modal__form-fields .parsley-errors-list.filled {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-top: 1.2rem;
+}
+
+.modal__form-input {
+  height: 6.7rem;
+  background: #f5f5f5;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding: 0 2.5rem;
+}
+.modal__form-input::-webkit-input-placeholder {
+  color: #a0a7b2;
+}
+.modal__form-input:-moz-placeholder {
+  color: #a0a7b2;
+}
+.modal__form-input::-moz-placeholder {
+  color: #a0a7b2;
+}
+.modal__form-input:-ms-input-placeholder {
+  color: #a0a7b2;
+}
+
+textarea.modal__form-input {
+  resize: none;
+  display: block;
+  height: 16rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+}
+
+.modal__form-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.modal__form-checkbox .parsley-errors-list {
+  display: none;
+}
+
+.modal__form-checkbox-input {
+  display: none;
+}
+
+.modal__form-checkbox-mark {
+  width: 1.6rem;
+  height: 1.6rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 1.3rem;
+  background: #f5f5f5;
+  border-radius: 0.2rem;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #f5f5f5;
+}
+.parsley-error .modal__form-checkbox-mark {
+  border-color: #EB5757;
+}
+.modal__form-checkbox-mark svg {
+  width: 1rem;
+  height: 1rem;
+  fill: white;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.modal__form-checkbox-text {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #a0a7b2;
+}
+.modal__form-checkbox-text a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.modal__form-checkbox-text a:link, .modal__form-checkbox-text a:visited {
+  color: var(--primary-color);
+}
+.no-touch .modal__form-checkbox-text a:hover, .touch .modal__form-checkbox-text a:active {
+  text-decoration: none;
+}
+
+.modal__form-checkbox-input:checked ~ .modal__form-checkbox-mark {
+  background-color: var(--primary-color);
+}
+.modal__form-checkbox-input:checked ~ .modal__form-checkbox-mark svg {
+  opacity: 1;
+}
+
+.modal__form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 2.8rem 6rem;
+  background: #4659ff;
+  border-radius: 0.4rem;
+  color: white;
+  font-family: var(--gotham);
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
 }

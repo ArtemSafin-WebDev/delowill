@@ -25,7 +25,7 @@
     "custom-event-polyfill": "^1.0.7",
     "dayjs": "^1.10.4",
     "detect-it": "^4.0.1",
-    "gsap": "^3.7.0",
+    "gsap": "^3.7.1",
     "inputmask": "^5.0.5",
     "lazysizes": "^5.2.0",
     "lodash": "^4.17.21",

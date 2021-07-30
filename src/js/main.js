@@ -21,6 +21,7 @@ import mobileReload from './mobileReload';
 import datepicker from './datepicker';
 import format from './format';
 import anchorLinks from './anchorLinks';
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     format();
     anchorLinks();
+    modals();
     // mobileReload();
 });
 
