@@ -3,42 +3,41 @@ export default function calculator() {
 
     elements.forEach(element => {
         const financialInputs = Array.from(element.querySelectorAll('.financial-model__numbers-input'));
-        const revenueMonth = element.querySelector('.js-revenue-month');
-        const revenueDay = element.querySelector('.js-revenue-day');
+        const revenueMonthElement = element.querySelector('.js-revenue-month');
+        const revenueDayElement = element.querySelector('.js-revenue-day');
 
-        const salesAmountMonth = element.querySelector('.js-sales-amount-month');
-        const salesAmountDay = element.querySelector('.js-sales-amount-day');
+        const salesAmountMonthElement = element.querySelector('.js-sales-amount-month');
+        const salesAmountDayElement = element.querySelector('.js-sales-amount-day');
 
-        const averageBillMonth = element.querySelector('.js-average-bill-month');
-        const averageBillDay = element.querySelector('.js-average-bill-day');
+        const averageBillMonthElement = element.querySelector('.js-average-bill-month');
+        const averageBillDayElement = element.querySelector('.js-average-bill-day');
 
-        const expensesMonth = element.querySelector('.js-expenses-month');
-        const expensesDay = element.querySelector('.js-expenses-day');
+        const expensesMonthElement = element.querySelector('.js-expenses-month');
+        const expensesDayElement = element.querySelector('.js-expenses-day');
 
-        const buyAmountMonth = element.querySelector('.js-buy-amount-month');
-        const buyAmountDay = element.querySelector('.js-buy-amount-day');
+        const buyAmountMonthElement = element.querySelector('.js-buy-amount-month');
+        const buyAmountDayElement = element.querySelector('.js-buy-amount-day');
 
-        const rentMonth = element.querySelector('.js-rent-month');
-        const rentDay = element.querySelector('.js-rent-day');
-        const wageMonth = element.querySelector('.js-wage-month');
-        const wageDay = element.querySelector('.js-wage-day');
+        const rentMonthElement = element.querySelector('.js-rent-month');
+        const rentDayElement = element.querySelector('.js-rent-day');
+        const wageMonthElement = element.querySelector('.js-wage-month');
+        const wageDayElement = element.querySelector('.js-wage-day');
 
-        const profitMonth = element.querySelector('.js-profit-month');
-        const profitDay = element.querySelector('.js-profit-day');
-
-        const averageBillCalculation = element.querySelector('.js-average-bill-calclation');
-        const salesCalculation = element.querySelector('.js-sales-calclation');
-        const totalRevenueCalculation = element.querySelector('.js-total-revenue-calculation');
+        const profitMonthElement = element.querySelector('.js-profit-month');
+        const profitDayElement = element.querySelector('.js-profit-day');
 
         const chartElement = element.querySelector('.js-chart');
 
-        const chartProfit = element.querySelector('.js-chart-profit');
-        const chartBuy = element.querySelector('.js-chart-buy');
-        const chartExpenses = element.querySelector('.js-chart-expenses');
+        const chartProfitElement = element.querySelector('.js-chart-profit');
+        const chartBuyElement = element.querySelector('.js-chart-buy');
+        const chartExpensesElement = element.querySelector('.js-chart-expenses');
 
-        const paybackDate = element.querySelector('.js-payment-date');
-        const investmentAmount = element.querySelector('.js-investment');
+        const paybackDateElement = element.querySelector('.js-payback-date');
 
+        const investmentsAmountElement = element.querySelector('.js-investments');
+
+        const rentalScaleElement = element.querySelector('.js-rental-scale');
+        const graphInvestments = element.querySelector('.js-graph-investments')
 
         let profit = 0;
 
@@ -58,7 +57,7 @@ export default function calculator() {
             tooltip: {
                 trigger: 'none'
             },
-            colors: ['#4658FF', '#C2D0FF', '#85A0FF'],
+            colors: ['#39B833', '#FFEBB5', '#F9CC46'],
             theme: 'maximized',
             enableInteractivity: false
         };
@@ -72,74 +71,89 @@ export default function calculator() {
         const DAYS_IN_MONTH = 30;
 
         function recalculate() {
-            const bill = Number(averageBillMonth.value);
-            const sales = Number(salesAmountMonth.value);
-            const rent = Number(rentMonth.value);
-            const wage = Number(wageMonth.value);
+            const billPerDay = Number(averageBillDayElement.value);
 
-            const buy = Number(buyAmountMonth.textContent.split(' ').join(''));
+            averageBillMonthElement.textContent = billPerDay;
 
-            const totalRevenue = sales * bill;
+            const salesPerDay = Number(salesAmountDayElement.value);
+            const salesPerMonth = salesPerDay * DAYS_IN_MONTH;
 
-            console.log(buyAmountMonth);
+            salesAmountMonthElement.textContent = Math.ceil(salesPerMonth);
 
-            console.log({ bill, sales, rent, wage, buy });
+            const revenuePerDay = Math.ceil(salesPerDay * billPerDay);
+            const revenuePerMonth = Math.ceil(salesPerMonth * billPerDay);
 
-            totalRevenueCalculation.textContent = totalRevenue;
-            salesCalculation.textContent = sales;
-            averageBillCalculation.textContent = bill;
-            revenueMonth.textContent = totalRevenue;
-            revenueDay.textContent = Math.ceil(totalRevenue / DAYS_IN_MONTH);
+            revenueMonthElement.textContent = revenuePerMonth;
+            revenueDayElement.textContent = revenuePerDay;
 
-            salesAmountDay.textContent = Math.ceil(sales / DAYS_IN_MONTH);
+            const buyDay = Number(buyAmountDayElement.textContent.replace(/\s/g, ''));
+            const buyMonth = buyDay * DAYS_IN_MONTH;
 
-            averageBillDay.textContent = bill;
-            buyAmountDay.textContent = Math.ceil(buy / DAYS_IN_MONTH);
+            buyAmountMonthElement.textContent = Math.ceil(buyMonth);
 
-            wageDay.textContent = Math.ceil(wage / DAYS_IN_MONTH);
+            const rentDay = Number(rentDayElement.value);
+            const rentMonth = rentDay * DAYS_IN_MONTH;
 
-            rentDay.textContent = Math.ceil(rent / DAYS_IN_MONTH);
-            const totalExpenses = rent + wage + buy;
+            rentMonthElement.textContent = rentMonth;
 
-            expensesMonth.textContent = totalExpenses;
+            const wageDay = Number(wageDayElement.value);
+            const wageMonth = wageDay * DAYS_IN_MONTH;
 
-            expensesDay.textContent = Math.ceil(totalExpenses / DAYS_IN_MONTH);
+            console.log('Wage day', wageDay);
 
-            profitMonth.textContent = totalRevenue - totalExpenses;
-            profitDay.textContent = Math.ceil((totalRevenue - totalExpenses) / DAYS_IN_MONTH);
+            wageMonthElement.textContent = wageMonth;
 
-            profit = totalRevenue - totalExpenses;
+            const totalExpensesPerDay = buyDay + rentDay + wageDay;
+            const totalExpensesPerMonth = totalExpensesPerDay * DAYS_IN_MONTH;
 
-            calculatePayback();
+            expensesDayElement.textContent = totalExpensesPerDay;
+            expensesMonthElement.textContent = totalExpensesPerMonth;
+
+            const totalProfitDay = revenuePerDay - totalExpensesPerDay;
+            const totalProfitMonth = revenuePerMonth - totalExpensesPerMonth;
+
+            profitDayElement.textContent = totalProfitDay;
+            profitMonthElement.textContent = totalProfitMonth;
+
+            const investmentsAmount = Number.parseFloat(investmentsAmountElement.textContent.replace(/\s/g, ''));
+
+            if (totalProfitMonth <= 0) {
+                paybackDateElement.textContent = '∞';
+                rentalScaleElement.textContent = '∞';
+                graphInvestments.textContent = `- ${investmentsAmount} ₽`
+            } else {
+                const months = Math.ceil(investmentsAmount / totalProfitMonth);
+
+                paybackDateElement.textContent = `${months} мес.`;
+
+                rentalScaleElement.innerHTML = '';
+                graphInvestments.textContent = `- ${investmentsAmount} ₽`
+                for (let i = 0; i < months; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = i + 1;
+
+                    rentalScaleElement.appendChild(span);
+                }
+            }
 
             if (chart) {
+                const profitPerUnit = Math.ceil(totalProfitMonth / salesPerMonth);
+                const buyPerUnit = Math.ceil(buyMonth / salesPerMonth);
+                const operationalCostPerUnit = Math.ceil((totalExpensesPerMonth - buyMonth) / salesPerMonth);
                 const data = google.visualization.arrayToDataTable([
                     ['Task', 'Диаграмма доходов/расходов'],
-                    ['Profit', profit >= 0 ? profit : 0],
-                    ['Buy', buy],
-                    ['Expense', totalExpenses]
+                    ['Profit', profitPerUnit >= 0 ? profitPerUnit : 0],
+                    ['Buy', buyPerUnit],
+                    ['Expense', operationalCostPerUnit]
                 ]);
 
                 chart.draw(data, options);
 
-                chartProfit.textContent = `${totalRevenue - totalExpenses} ₽`;
-                chartBuy.textContent = `${buy} ₽`;
-                chartExpenses.textContent = `${totalExpenses} ₽`;
+                chartProfitElement.textContent = `${profitPerUnit} ₽`;
+                chartBuyElement.textContent = `${buyPerUnit} ₽`;
+                chartExpensesElement.textContent = `${operationalCostPerUnit} ₽`;
             }
         }
-
-        function calculatePayback() {
-            if (profit <= 0) {
-                paybackDate.textContent = '∞'
-            } else {
-                const date = Math.ceil(Number(investmentAmount.value) / profit);
-                paybackDate.textContent = `${date} мес.`;
-            }
-        }
-
-        investmentAmount.addEventListener('input', () => {
-            calculatePayback();
-        })
 
         financialInputs.forEach(input => {
             input.addEventListener('input', () => {

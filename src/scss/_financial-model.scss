@@ -59,13 +59,12 @@
     line-height: 2.4rem;
     font-family: var(--gotham);
     color: var(--primary-color);
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     &:link,
     &:visited {
         color: var(--primary-color);
     }
 
- 
     svg {
         width: 1.6rem;
         height: 2rem;
@@ -87,7 +86,7 @@
     line-height: 1.8rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.6rem;
 }
 
 .financial-model__content {
@@ -195,14 +194,17 @@
 }
 
 .financial-model__numbers-form-table {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #f0f0f0;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+
+    &:first-child {
+        border: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
 
     &:last-child {
-        border: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
     }
 
     table,
@@ -266,6 +268,10 @@
         b {
         }
     }
+
+    thead th {
+        color: var(--primary-color);
+    }
 }
 
 .financial-model__numbers-input-wrapper {
@@ -294,6 +300,7 @@
 }
 
 .financial-model__chart {
+    margin-bottom: 5rem;
     @include breakpoint(mobile) {
         margin-bottom: 5rem;
     }
@@ -413,31 +420,66 @@
 
 .financial-model__rental {
     margin-top: auto;
-    padding: 3.2rem;
-    border-radius: 1.2rem;
-    background: #f6f6f6;
-
-    @include breakpoint(mobile) {
-        padding: 2rem;
-    }
-}
-
-.financial-model__rental-heading {
-    font-weight: bold;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
 }
 
 .financial-model__rental-graph {
-    display: block;
-    height: auto;
-    margin-bottom: 4rem;
+    position: relative;
+}
+
+.financial-model__rental-graph-investments {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    line-height: 117%;
+    white-space: nowrap;
+    margin-bottom: -0.4rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 2rem;
+        right: 0;
+        left: auto;
+        bottom: 1.2rem;
+    }
+}
+
+.financial-model__rental-zero-point {
+    position: absolute;
+    position: absolute;
+    left: 100%;
+    top: 27%;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    line-height: 117%;
+    white-space: nowrap;
+    
+    @include breakpoint(mobile) {
+        right: 0;
+        left: auto;
+        margin-top: 1rem;
+    }
+}
+
+.financial-model__rental-graph-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.financial-model__rental-scale {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    line-height: 117%;
+    color: #a0a7b2;
+    margin-top: 0.7rem;
+    width: 70%;
+
+    span {
+        &:last-child {
+            margin-right: -0.5rem;
+        }
     }
 }
 
@@ -518,5 +560,36 @@
         font-size: 2rem;
         line-height: 1.2;
         min-height: auto;
+    }
+}
+
+.financial-model__payback {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 5rem;
+}
+
+.financial-model__payback-block {
+    &:nth-child(2) {
+        grid-column: span 2;
+    }
+}
+
+.financial-model__payback-block-key {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #a0a7b2;
+}
+
+.financial-model__payback-block-value {
+    font-weight: bold;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.04rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
     }
 }

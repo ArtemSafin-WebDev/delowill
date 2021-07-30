@@ -3762,47 +3762,10 @@
                 </div>
                 <div class="financial-model__content">
                     <div class="financial-model__left-col">
-                        <div class="financial-model__calculation">
-                            <h3 class="financial-model__block-heading">
-                                Расчет себестоимости 1 продажа
-                            </h3>
-                            <div class="financial-model__calculated">
-                                <div class="financial-model__calculated-block">
-                                    <div class="financial-model__calculated-block-title">
-                                        Средний чек
-                                    </div>
-                                    <div class="financial-model__calculated-block-amount js-average-bill-calclation">
-                                        350
-                                    </div>
-                                </div>
-                                <svg width="14" height="14" aria-hidden="true" class="icon-multiply">
-                                    <use xlink:href="#multiply"></use>
-                                </svg>
-                                <div class="financial-model__calculated-block">
-                                    <div class="financial-model__calculated-block-title">
-                                        Кол-во продаж
-                                    </div>
-                                    <div class="financial-model__calculated-block-amount js-sales-calclation">
-                                        2 000
-                                    </div>
-                                </div>
-                                <svg width="14" height="14" aria-hidden="true" class="icon-equals">
-                                    <use xlink:href="#equals"></use>
-                                </svg>
-                                <div
-                                    class="financial-model__calculated-block financial-model__calculated-block--filled">
-                                    <div class="financial-model__calculated-block-title">
-                                        Выручка
-                                    </div>
-                                    <div class="financial-model__calculated-block-amount js-total-revenue-calculation">
-                                        700 000
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="financial-model__numbers">
                             <h3 class="financial-model__block-heading">
-                                Расчет себестоимости 1 продажа
+                                Расчет доходов и расходов в сердем за месяц/день
                             </h3>
                             <form action="/" method="POST" class="financial-model__numbers-form">
                                 <div class="financial-model__numbers-form-tables">
@@ -3814,28 +3777,23 @@
 
                                                     </th>
                                                     <th>
-                                                        Месяц
+                                                        День
+
                                                     </th>
                                                     <th>
-                                                        День
+                                                        Месяц
                                                     </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr class="selected">
                                                     <th>
-
                                                         Доходы
-
                                                     </th>
-                                                    <td class="js-revenue-month">
-
-                                                        700 000 ₽
-
-                                                    </td>
                                                     <td class="js-revenue-day">
 
-                                                        23 000 ₽
+                                                    </td>
+                                                    <td class=" js-revenue-month">
 
 
                                                     </td>
@@ -3847,16 +3805,16 @@
                                                     <td>
                                                         <label class="financial-model__numbers-input-wrapper">
                                                             <input type="tel"
-                                                                class="js-numeric-input financial-model__numbers-input js-sales-amount-month"
-                                                                name="sales" value="2000">
+                                                                class="js-numeric-input financial-model__numbers-input js-sales-amount-day"
+                                                                name="sales" value="67">
                                                             <svg width="14" height="14" aria-hidden="true"
                                                                 class="icon-pencil">
                                                                 <use xlink:href="#pencil"></use>
                                                             </svg>
                                                         </label>
                                                     </td>
-                                                    <td class="js-sales-amount-day">
-                                                        67
+                                                    <td class=" js-sales-amount-month">
+
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -3866,7 +3824,7 @@
                                                     <td>
                                                         <label class="financial-model__numbers-input-wrapper">
                                                             <input type="tel"
-                                                                class="js-numeric-input js-average-bill-month financial-model__numbers-input"
+                                                                class="js-numeric-input js-average-bill-day  financial-model__numbers-input"
                                                                 name="sales" value="350">
                                                             <svg width="14" height="14" aria-hidden="true"
                                                                 class="icon-pencil">
@@ -3874,8 +3832,8 @@
                                                             </svg>
                                                         </label>
                                                     </td>
-                                                    <td class="js-average-bill-day">
-                                                        350
+                                                    <td class="js-average-bill-month">
+
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -3887,18 +3845,12 @@
                                             <tbody>
                                                 <tr class="selected">
                                                     <th>
-
                                                         Расходы
-
                                                     </th>
-                                                    <td class="js-expenses-month">
-
-                                                        510 000 ₽
+                                                    <td class="js-expenses-day ">
 
                                                     </td>
-                                                    <td class="js-expenses-day">
-
-                                                        17 400 ₽
+                                                    <td class="js-expenses-month">
 
                                                     </td>
                                                 </tr>
@@ -3906,11 +3858,11 @@
                                                     <th>
                                                         Закуп товара, руб
                                                     </th>
-                                                    <td class="js-buy-amount-month">
-                                                        350000
-                                                    </td>
-                                                    <td class="js-buy-amount-day">
+                                                    <td class="js-buy-amount-day ">
                                                         11600
+                                                    </td>
+                                                    <td class="js-buy-amount-month">
+
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -3920,16 +3872,16 @@
                                                     <td>
                                                         <label class="financial-model__numbers-input-wrapper">
                                                             <input type="tel"
-                                                                class="js-numeric-input js-rent-month financial-model__numbers-input"
-                                                                name="sales" value="60000">
+                                                                class="js-numeric-input js-rent-day  financial-model__numbers-input"
+                                                                name="sales" value="2000">
                                                             <svg width="14" height="14" aria-hidden="true"
                                                                 class="icon-pencil">
                                                                 <use xlink:href="#pencil"></use>
                                                             </svg>
                                                         </label>
                                                     </td>
-                                                    <td class="js-rent-day">
-                                                        2 000
+                                                    <td class="js-rent-month">
+
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -3939,16 +3891,16 @@
                                                     <td>
                                                         <label class="financial-model__numbers-input-wrapper">
                                                             <input type="tel"
-                                                                class="js-numeric-input js-wage-month financial-model__numbers-input"
-                                                                name="sales" value="190000">
+                                                                class="js-numeric-input js-wage-day financial-model__numbers-input"
+                                                                name="sales" value="1500">
                                                             <svg width="14" height="14" aria-hidden="true"
                                                                 class="icon-pencil">
                                                                 <use xlink:href="#pencil"></use>
                                                             </svg>
                                                         </label>
                                                     </td>
-                                                    <td class="js-wage-day">
-                                                        1 500
+                                                    <td class="js-wage-month ">
+
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -3961,15 +3913,35 @@
                                                     <th>
                                                         Прибыль
                                                     </th>
-                                                    <td class="js-profit-month">
-                                                        190 000 ₽
-                                                    </td>
                                                     <td class="js-profit-day">
-                                                        6 300 ₽
+
+                                                    </td>
+                                                    <td class=" js-profit-month">
+
+
+
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="financial-model__payback">
+                                        <div class="financial-model__payback-block">
+                                            <div class="financial-model__payback-block-key">
+                                                Окупаемость
+                                            </div>
+                                            <div class="financial-model__payback-block-value js-payback-date">
+                                                12 мес.
+                                            </div>
+                                        </div>
+                                        <div class="financial-model__payback-block">
+                                            <div class="financial-model__payback-block-key">
+                                                Вложения, руб
+                                            </div>
+                                            <div class="financial-model__payback-block-value js-investments">
+                                                300 000 ₽
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -3978,7 +3950,7 @@
                     <div class="financial-model__right-col">
                         <div class="financial-model__chart">
                             <h3 class="financial-model__block-heading">
-                                Диаграмма доходов/расходов
+                                расчет себестоимости одной продажи
                             </h3>
                             <div class="financial-model__chart-row">
                                 <div class="financial-model__chart-graph">
@@ -3990,7 +3962,7 @@
                                 <div class="financial-model__chart-legend">
                                     <div class="financial-model__chart-legend-item">
                                         <div class="financial-model__chart-legend-circle"
-                                            style="background-color: #4658FF;">
+                                            style="background-color: #39B833;;">
 
                                         </div>
                                         <div class="financial-model__chart-legend-content">
@@ -4004,7 +3976,7 @@
                                     </div>
                                     <div class="financial-model__chart-legend-item">
                                         <div class="financial-model__chart-legend-circle"
-                                            style="background-color: #C2D0FF;">
+                                            style="background-color: #FFEBB5;">
 
                                         </div>
                                         <div class="financial-model__chart-legend-content">
@@ -4018,7 +3990,7 @@
                                     </div>
                                     <div class="financial-model__chart-legend-item">
                                         <div class="financial-model__chart-legend-circle"
-                                            style="background-color:  #85A0FF;">
+                                            style="background-color:  #F9CC46;">
 
                                         </div>
                                         <div class="financial-model__chart-legend-content">
@@ -4035,31 +4007,36 @@
                             </div>
                         </div>
                         <div class="financial-model__rental">
-                            <h4 class="financial-model__rental-heading">
-                                График окупаемости
-                            </h4>
-                            <img src="img/graph.svg" alt="" class="financial-model__rental-graph">
-                            <div class="financial-model__parameters">
-                                <div class="financial-model__investments">
-                                    <h4 class="financial-model__investments-title">
-                                        Вложения, руб
-                                    </h4>
-                                    <label class="financial-model__investments-wrapper">
-                                        <input type="tel"
-                                            class="financial-model__investments-input js-numeric-input js-investment"
-                                            value="300000">
-                                        <svg width="14" height="14" aria-hidden="true" class="icon-pencil">
-                                            <use xlink:href="#pencil"></use>
-                                        </svg>
-                                    </label>
 
+
+                            <h3 class="financial-model__block-heading">
+                                График окупаемости
+                            </h3>
+                            <div class="financial-model__rental-graph">
+                                <img src="img/rental-graph.svg" alt="" class="financial-model__rental-graph-image">
+                                <div class="financial-model__rental-graph-investments js-graph-investments">
+                                    
                                 </div>
-                                <div class="financial-model__payoff">
-                                    <h4 class="financial-model__payoff-heading">
-                                        Окупаемость
-                                    </h4>
-                                    <div class="financial-model__payoff-date js-payment-date">12 мес.</div>
+                                <div class="financial-model__rental-zero-point">
+                                    0 ₽
                                 </div>
+                            </div>
+                            <div class="financial-model__rental-scale js-rental-scale">
+                                <span>
+                                    1
+                                </span>
+                                <span>
+                                    2
+                                </span>
+                                <span>
+                                    3
+                                </span>
+                                <span>
+                                    4
+                                </span>
+                                <span>
+                                    5
+                                </span>
                             </div>
                         </div>
                     </div>
