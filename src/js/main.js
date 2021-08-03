@@ -24,6 +24,10 @@ import anchorLinks from './anchorLinks';
 import modals from './modals';
 import franchiseMenu from './franchiseMenu';
 import sectionsMenu from './sectionsMenu';
+import franchiseCatalog from './franchiseCatalog';
+import showMoreBtns from './showMoreBtns';
+import articles from './articles';
+import projectNewsSlider from './projectNewsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -50,7 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     franchiseMenu();
     sectionsMenu();
-    // mobileReload();
+    franchiseCatalog();
+    showMoreBtns();
+    articles();
+    projectNewsSlider();
 });
 
 window.addEventListener('load', function() {

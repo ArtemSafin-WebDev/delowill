@@ -64,6 +64,10 @@ body {
     color: var(--text-color);
     font-family: var(--roboto);
     background-color: #f0f0f0;
+
+    &.white-bg {
+        background-color: #fff;
+    }
 }
 
 main {

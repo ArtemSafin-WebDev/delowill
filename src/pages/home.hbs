@@ -1,0 +1,1795 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="about-service">
+    <div class="about-service__bg">
+        <img src="img/about-service-bg.jpg" alt="" class="about-service__bg-image">
+    </div>
+    <div class="container">
+        <div class="about-service__row">
+            <div class="about-service__col">
+                <h1 class="about-service__heading">
+                    <img src="img/delowill-blue-logo.svg" alt="">
+                    — сервис, который упростит вам подбор франшиз
+                </h1>
+                <div class="about-service__text">
+                    <p>
+                        Чтобы воспользоваться всеми возможностями и получить полный доступ - зарегистрируйтесь, это
+                        бесплатно!
+                    </p>
+                </div>
+                <div class="about-service__controls">
+                    <div class="about-service__total">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                            <use xlink:href="#diagonal-arrow"></use>
+                        </svg>
+                        <div class="about-service__total-content">
+                            <h4 class="about-service__total-title">
+                                25 000
+                            </h4>
+                            <div class="about-service__total-text">
+                                франшиз
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="about-service__register-link">
+                        Зарегистрироваться
+                    </a>
+                </div>
+            </div>
+            <div class="about-service__col">
+                <ul class="about-service__features-list">
+                    <li class="about-service__features-list-item">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-location">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        Адреса франчайзи в одном месте
+                    </li>
+                    <li class="about-service__features-list-item">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                            <use xlink:href="#stats"></use>
+                        </svg>
+                        Доступ к закрытой информации
+                        без воды
+                    </li>
+                    <li class="about-service__features-list-item">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-message">
+                            <use xlink:href="#message"></use>
+                        </svg>
+                        Веди переговоры со всеми
+                        франшизами в одно окно
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-filters js-show-more-container">
+    <div class="container">
+        <form action="/" class="main-filters__form">
+            <div class="main-filters__search">
+                <label for="#main-filters-search" class="main-filters__search-icon">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                        <use xlink:href="#search-short"></use>
+                    </svg>
+                </label>
+                <input type="search" id="main-filters-search" class="main-filters__search-input"
+                    placeholder="Поиск среди 25 000 франшиз">
+            </div>
+            <div class="main-filters__row">
+                <div class="main-filters__col">
+                    <div class="main-filters__block">
+                        <h2 class="main-filters__block-heading">
+                            Город
+                        </h2>
+                        <div class="main-filters__select">
+                            <select name="city" class="js-custom-select">
+                                <option value="" placeholder>Выберите свой город</option>
+                                <option value="kazan">Казань</option>
+                                <option value="moscow">Москва</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main-filters__block">
+                        <h2 class="main-filters__block-heading">
+                            Компетенции
+                        </h2>
+                        <div class="main-filters__select">
+                            <select name="city" class="js-custom-select">
+                                <option value="" placeholder>Выберите</option>
+                                <option value="1">Компетенция 1</option>
+                                <option value="2">Компетенция 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main-filters__block">
+                        <h2 class="main-filters__block-heading">
+                            Размер инвестиций
+                        </h2>
+                        <div class="main-filters__ranges">
+                            <div class="main-filters__range-wrapper">
+                                <label for="main-filters-from" class="main-filters__range-label">
+                                    от
+                                </label>
+                                <input type="tel" name="from"
+                                    class="main-filters__range-input js-numeric-input-decimals" placeholder="100 000"
+                                    id="main-filters-from">
+                            </div>
+                            <div class="main-filters__range-wrapper">
+                                <label for="main-filters-to" class="main-filters__range-label">
+                                    до
+                                </label>
+                                <input type="tel" name="to" class="main-filters__range-input js-numeric-input-decimals"
+                                    placeholder="3 000 000" id="main-filters-to">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-filters__col">
+                    <div class="main-filters__block">
+
+                        <h2 class="main-filters__block-heading">
+                            Cферы
+                        </h2>
+                        <div class="main-filters__checkboxes">
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input" checked>
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Автоуслуги
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Недвижимость
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Услуги для бизнеса (b2b)
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Детские франшизы
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Обучение и образование
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Юридические и финансовые
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Интернет, ИТ и реклама
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Отдых и развлечения
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Обучение и образование
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Клининг и химчистка
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Производство
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Отдых и развлечения
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Красота и здоровье
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Спорт и фитнес
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Спорт и фитнес
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Медицинские услуги
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Туризм и визовые центры
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="main-filters__checkbox main-filters__checkbox--hidden">
+                                <input type="checkbox" name="category" class="main-filters__checkbox-input">
+                                <span class="main-filters__checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-filters__checkbox-text">
+                                    Скрытая категория
+                                    <span class="main-filters__checkbox-count">
+                                        168
+                                    </span>
+                                </span>
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="main-filters__controls">
+                        <button class="main-filters__all-btn js-show-more" type="button">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-dots">
+                                <use xlink:href="#dots"></use>
+                            </svg>
+                            <span class="main-filters__all-btn-text">
+                                <span>
+                                    Все категории
+                                </span>
+                                <span>
+                                    Скрыть
+                                </span>
+                            </span>
+
+                        </button>
+                        <button type="reset" class="main-filters__reset-btn">
+                            Сбросить фильтр
+                        </button>
+                        <button type="submit" class="main-filters__submit-btn">
+                            Показать 143 франшизы
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+
+<section class="articles js-articles">
+    <div class="container">
+        <div class="articles__row">
+            <div class="articles__sidebar">
+                <div class="articles__sidebar-inner">
+                    <h2 class="articles__heading">
+                        Статьи и подборки
+                    </h2>
+                    <nav class="articles__nav">
+                        <a href="#" class="articles__nav-link active">
+                            Подборки
+                        </a>
+                        <a href="#" class="articles__nav-link">
+                            Полезные статьи
+                        </a>
+                        <a href="#" class="articles__nav-link">
+                            Партнерские материалы
+                        </a>
+                    </nav>
+
+                    <div class="articles__stay-tuned">
+                        <h3 class="articles__stay-tuned-heading">
+                            Будьте в курсе новых материалов каждую неделю
+                        </h3>
+                        <a href="#" class="article__stay-tuned-link">
+                            Зарегистрироваться
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="articles__main">
+                <div class="articles__slider">
+
+                    <ul class="articles__list">
+                        <li class="articles__list-item articles__list-item--large">
+                            <a href="#" class="articles__card-large">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/1.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-large-title">
+                                    <span>
+                                        Топ-10
+                                    </span>
+                                    франшиз 2019 года
+                                </h4>
+                                <div class="articles__card-large-text">
+                                    <p>
+                                        На портале различные инвестиционные предложения и возможности для начала и
+                                        развития
+                                        вашего собственного бизнеса.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="articles__list-item">
+                            <a href="#" class="articles__card">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/2.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-title">
+                                    Инстаграм-магазины
+                                </h4>
+                                <div class="articles__card-text">
+                                    <p>
+                                        1 509<br> франшиз
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="articles__list-item">
+                            <a href="#" class="articles__card">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/3.jpg" alt="" class="articles__card-bg-image">
+                                </div>
+
+                                <div class="articles__card-text">
+                                    <p>
+                                        1 509<br> франшиз
+                                    </p>
+                                </div>
+                                <h4 class="articles__card-title">
+                                    Франшизы круглосуточного алкомаркета
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="articles__list-item">
+                            <a href="#" class="articles__card articles__card--dark">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/4.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-title">
+                                    С быстрой окупаемостью
+                                </h4>
+                                <div class="articles__card-text">
+                                    <p>
+                                        27 909 франшиз
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="articles__list-item">
+                            <a href="#" class="articles__card">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/5.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-title">
+                                    Проверенные франшизы
+                                </h4>
+                                <div class="articles__card-text">
+                                    <p>
+                                        209 франшиз
+                                    </p>
+                                </div>
+                                <div class="articles__card-checked">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-secured">
+                                        <use xlink:href="#secured"></use>
+                                    </svg>
+                                    Проверенo Betobe
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="articles__list-item">
+                            <a href="#" class="articles__card">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/2.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-title">
+                                    Инстаграм-магазины
+                                </h4>
+                                <div class="articles__card-text">
+                                    <p>
+                                        1 509<br> франшиз
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="articles__list-item articles__list-item--large">
+                            <a href="#" class="articles__card-large">
+                                <div class="articles__card-bg">
+                                    <img src="img/articles/1.svg" alt="" class="articles__card-bg-image">
+                                </div>
+                                <h4 class="articles__card-large-title">
+                                    <span>
+                                        Топ-10
+                                    </span>
+                                    франшиз 2019 года
+                                </h4>
+                                <div class="articles__card-large-text">
+                                    <p>
+                                        На портале различные инвестиционные предложения и возможности для начала и
+                                        развития
+                                        вашего собственного бизнеса.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <a href="#" class="articles__show-more">
+                    Показать больше
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="franchise-catalog js-franchise-catalog">
+    <div class="container">
+        <div class="franchise-catalog__row">
+            <div class="franchise-catalog__sidebar">
+                <div class="franchise-catalog__sidebar-inner">
+                    <div class="franchise-catalog__filters js-show-more-container">
+                        <button class="franchise-catalog__filters-menu-open" type="button">
+                            Фильтры
+                        </button>
+                        <div class="franchise-catalog__filters-menu">
+                            <div class="franchise-catalog__filters-menu-controls">
+                                <button class="franchise-catalog__filters-menu-back-btn" type="button">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-back">
+                                        <use xlink:href="#back"></use>
+                                    </svg>
+                                </button>
+
+                                <h4 class="franchise-catalog__filters-menu-title">
+                                    Фильтр
+                                </h4>
+                            </div>
+
+                            <form action="/" method="GET" class="franchise-catalog__filters-form">
+                                <div class="franchise-catalog__filters-block">
+                                    <h3 class="franchise-catalog__filters-block-heading">
+                                        Город
+                                    </h3>
+                                    <div class="franchise-catalog__filters-select">
+                                        <select name="city" class="js-custom-select">
+                                            <option value="" placeholder>Выберите свой город</option>
+                                            <option value="kazan">Казань</option>
+                                            <option value="moscow">Москва</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="franchise-catalog__filters-block">
+                                    <h3 class="franchise-catalog__filters-block-heading">
+                                        Компетенции
+                                    </h3>
+                                    <div class="franchise-catalog__filters-select">
+                                        <select name="city" class="js-custom-select">
+                                            <option value="" placeholder>Выберите</option>
+                                            <option value="1">Компетенция 1</option>
+                                            <option value="2">Компетенция 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="franchise-catalog__filters-block">
+                                    <h3 class="franchise-catalog__filters-block-heading">
+                                        Размер инвестиций
+                                    </h3>
+                                    <div class="franchise-catalog__filters-ranges">
+                                        <div class="franchise-catalog__filters-range-wrapper">
+                                            <label for="catalog-filters-from"
+                                                class="franchise-catalog__filters-range-label">
+                                                от
+                                            </label>
+                                            <input type="tel" name="from"
+                                                class="franchise-catalog__filters-range-input js-numeric-input-decimals"
+                                                placeholder="100 000" id="catalog-filters-from">
+                                        </div>
+                                        <div class="franchise-catalog__filters-range-wrapper">
+                                            <label for="catalog-filters-to"
+                                                class="franchise-catalog__filters-range-label">
+                                                до
+                                            </label>
+                                            <input type="tel" name="to"
+                                                class="franchise-catalog__filters-range-input js-numeric-input-decimals"
+                                                placeholder="3 000 000" id="catalog-filters-to">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="franchise-catalog__filters-block">
+                                    <h3 class="franchise-catalog__filters-block-heading">
+                                        Cферы
+                                    </h3>
+                                    <div class="franchise-catalog__filters-checkboxes">
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input" checked>
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Автоуслуги
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Детские франшизы
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Интернет, ИТ и реклама
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Клининг и химчистка
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Красота и здоровье
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="franchise-catalog__filters-checkbox">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Медицинские услуги
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label
+                                            class="franchise-catalog__filters-checkbox franchise-catalog__filters-checkbox--hidden">
+                                            <input type="checkbox" name="category"
+                                                class="franchise-catalog__filters-checkbox-input">
+                                            <span class="franchise-catalog__filters-checkbox-mark">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                                                    <use xlink:href="#checkmark"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="franchise-catalog__filters-checkbox-text">
+                                                Скрытая категория
+                                                <span class="franchise-catalog__filters-checkbox-count">
+                                                    168
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <button class="franchise-catalog__filters-checkboxes-all-btn js-show-more"
+                                        type="button">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-dots">
+                                            <use xlink:href="#dots"></use>
+                                        </svg>
+                                        <span class="franchise-catalog__filters-checkboxes-all-btn-text">
+                                            <span>
+                                                Все категории
+                                            </span>
+                                            <span>
+                                                Скрыть
+                                            </span>
+
+                                        </span>
+
+                                    </button>
+                                </div>
+
+                                <button type="reset" class="franchise-catalog__filters-reset-btn">
+                                    Сбросить фильтр
+                                </button>
+                                <a href="#" class="franchise-catalog__filters-our-sets">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-flame">
+                                        <use xlink:href="#flame"></use>
+                                    </svg>
+                                    Наши подборки
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="franchise-catalog__main">
+                <h2 class="franchise-catalog__heading">
+                    Каталог франшиз
+                </h2>
+                <ul class="franchise-catalog__list">
+                    <li class="franchise-catalog__list-item">
+                        <div class="franchise-catalog__card">
+                            <div class="franchise-catalog__card-main-info">
+                                <div class="franchise-catalog__card-logo-wrapper">
+                                    <img src="img/chio-logo.png" alt="" class="franchise-catalog__card-logo">
+                                    <div class="franchise-catalog__card-rating">
+                                        9,1
+                                    </div>
+                                </div>
+
+                                <h3 class="franchise-catalog__card-main-info-title">
+                                    Сеть парикмахерских<br> «Чио-Чио»
+                                </h3>
+
+                                <div class="franchise-catalog__card-main-info-text">
+                                    <p>
+                                        Чио Чио является самой быстрорастущей сетью в салонном бизнесе.
+                                        Ежемесячно запускается 40-50 парикмахерских.
+                                    </p>
+                                </div>
+                                <div class="franchise-catalog__card-main-info-content">
+                                    <div class="franchise-catalog__card-main-info-top-row">
+                                        <h3 class="franchise-catalog__card-achievements-title">
+                                            Достижения
+                                        </h3>
+                                        <a href="#" class="franchise-catalog__card-main-info-show-all">
+                                            смотреть все
+                                        </a>
+                                    </div>
+
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <ul class="franchise-catalog__card-achievements-list">
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <div class="franchise-catalog__card-main-info-investments-table">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                Инвестиции
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Прибыль
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Количество точек
+                                                            </th>
+                                                            <td>
+                                                                550
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Собственных точек
+                                                            </th>
+                                                            <td>
+                                                                3
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Окупаемость
+                                                            </th>
+                                                            <td>
+                                                                2 месяца
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Паушальный взнос
+                                                            </th>
+                                                            <td>
+                                                                200 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <a href="#" class="franchise-catalog__card-main-info-detailed-description">
+                                                <span>
+                                                    Подробное описание
+                                                </span>
+                                                <span>
+                                                    Скрыть
+                                                </span>
+
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="franchise-catalog__card-main-info-content-col franchise-catalog__card-main-info-content-col--no-border">
+                                            <ul class="franchise-catalog__card-main-info-ratings-list">
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/1.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        7,8
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/2.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,2
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/3.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,1
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="franchise-catalog__card-detail-info">
+                                <div class="franchise-catalog__card-detail-info-inner">
+                                    <div class="franchise-catalog__card-detail-text-info">
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                отличия от конкурентов
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Стрижка за 15 минут
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по СЭС
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по единой цене
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Вид товаров/услуг
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Целевая аудитория
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-tags">
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Школьники
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Студенты
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Мужчины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Женщины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Сотрудники со средним и нижним доходом
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Пенсионеры
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Требования к помещению
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-text">
+                                                <p>
+                                                    Площадь 25 квадратов, высокая проходимость.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-video-block">
+                                        <a href="#" class="franchise-catalog__card-video-wrapper">
+                                            <img src="img/video-preview.jpg" alt=""
+                                                class="franchise-catalog__card-video-preview-image">
+                                            <div class="franchise-catalog__card-video-watch-video">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-watch-video">
+                                                    <use xlink:href="#watch-video"></use>
+                                                </svg>
+                                                Смотреть видео
+                                            </div>
+                                        </a>
+                                        <div class="franchise-catalog__card-video-block-info">
+                                            <div class="franchise-catalog__card-video-block-btns">
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-star">
+                                                        <use xlink:href="#star"></use>
+                                                    </svg>
+                                                    В избранное
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                                        <use xlink:href="#stats"></use>
+                                                    </svg>
+                                                    К сравнению
+                                                </a>
+                                            </div>
+                                            <a href="#" class="franchise-catalog__card-video-block-learn-more">
+                                                Узнать больше
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="franchise-catalog__list-item">
+                        <div class="franchise-catalog__card">
+                            <div class="franchise-catalog__card-main-info">
+                                <div class="franchise-catalog__card-logo-wrapper">
+                                    <img src="img/chio-logo.png" alt="" class="franchise-catalog__card-logo">
+                                    <div class="franchise-catalog__card-rating">
+                                        9,1
+                                    </div>
+                                </div>
+
+                                <h3 class="franchise-catalog__card-main-info-title">
+                                    Сеть парикмахерских<br> «Чио-Чио»
+                                </h3>
+
+                                <div class="franchise-catalog__card-main-info-text">
+                                    <p>
+                                        Чио Чио является самой быстрорастущей сетью в салонном бизнесе.
+                                        Ежемесячно запускается 40-50 парикмахерских.
+                                    </p>
+                                </div>
+                                <div class="franchise-catalog__card-main-info-content">
+                                    <div class="franchise-catalog__card-main-info-top-row">
+                                        <h3 class="franchise-catalog__card-achievements-title">
+                                            Достижения
+                                        </h3>
+                                        <a href="#" class="franchise-catalog__card-main-info-show-all">
+                                            смотреть все
+                                        </a>
+                                    </div>
+
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <ul class="franchise-catalog__card-achievements-list">
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <div class="franchise-catalog__card-main-info-investments-table">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                Инвестиции
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Прибыль
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Количество точек
+                                                            </th>
+                                                            <td>
+                                                                550
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Собственных точек
+                                                            </th>
+                                                            <td>
+                                                                3
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Окупаемость
+                                                            </th>
+                                                            <td>
+                                                                2 месяца
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Паушальный взнос
+                                                            </th>
+                                                            <td>
+                                                                200 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <a href="#" class="franchise-catalog__card-main-info-detailed-description">
+                                                <span>
+                                                    Подробное описание
+                                                </span>
+                                                <span>
+                                                    Скрыть
+                                                </span>
+
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="franchise-catalog__card-main-info-content-col franchise-catalog__card-main-info-content-col--no-border">
+                                            <ul class="franchise-catalog__card-main-info-ratings-list">
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/1.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        7,8
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/2.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,2
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/3.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,1
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="franchise-catalog__card-detail-info">
+                                <div class="franchise-catalog__card-detail-info-inner">
+                                    <div class="franchise-catalog__card-detail-text-info">
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                отличия от конкурентов
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Стрижка за 15 минут
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по СЭС
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по единой цене
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Вид товаров/услуг
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Целевая аудитория
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-tags">
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Школьники
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Студенты
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Мужчины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Женщины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Сотрудники со средним и нижним доходом
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Пенсионеры
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Требования к помещению
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-text">
+                                                <p>
+                                                    Площадь 25 квадратов, высокая проходимость.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-video-block">
+                                        <a href="#" class="franchise-catalog__card-video-wrapper">
+                                            <img src="img/video-preview.jpg" alt=""
+                                                class="franchise-catalog__card-video-preview-image">
+                                            <div class="franchise-catalog__card-video-watch-video">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-watch-video">
+                                                    <use xlink:href="#watch-video"></use>
+                                                </svg>
+                                                Смотреть видео
+                                            </div>
+                                        </a>
+                                        <div class="franchise-catalog__card-video-block-info">
+                                            <div class="franchise-catalog__card-video-block-btns">
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-star">
+                                                        <use xlink:href="#star"></use>
+                                                    </svg>
+                                                    В избранное
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                                        <use xlink:href="#stats"></use>
+                                                    </svg>
+                                                    К сравнению
+                                                </a>
+                                            </div>
+                                            <a href="#" class="franchise-catalog__card-video-block-learn-more">
+                                                Узнать больше
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="franchise-catalog__list-item">
+                        <div class="franchise-catalog__card">
+                            <div class="franchise-catalog__card-main-info">
+                                <div class="franchise-catalog__card-logo-wrapper">
+                                    <img src="img/chio-logo.png" alt="" class="franchise-catalog__card-logo">
+                                    <div class="franchise-catalog__card-rating">
+                                        9,1
+                                    </div>
+                                </div>
+
+                                <h3 class="franchise-catalog__card-main-info-title">
+                                    Сеть парикмахерских<br> «Чио-Чио»
+                                </h3>
+
+                                <div class="franchise-catalog__card-main-info-text">
+                                    <p>
+                                        Чио Чио является самой быстрорастущей сетью в салонном бизнесе.
+                                        Ежемесячно запускается 40-50 парикмахерских.
+                                    </p>
+                                </div>
+                                <div class="franchise-catalog__card-main-info-content">
+                                    <div class="franchise-catalog__card-main-info-top-row">
+                                        <h3 class="franchise-catalog__card-achievements-title">
+                                            Достижения
+                                        </h3>
+                                        <a href="#" class="franchise-catalog__card-main-info-show-all">
+                                            смотреть все
+                                        </a>
+                                    </div>
+
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <ul class="franchise-catalog__card-achievements-list">
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div class="franchise-catalog__card-achievements-card">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                                            <use xlink:href="#ok"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            90% заполненый профиль
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-achievements-list-item">
+                                                    <div
+                                                        class="franchise-catalog__card-achievements-card franchise-catalog__card-achievements-card--inactive">
+                                                        <svg width="14" height="14" aria-hidden="true"
+                                                            class="icon-flame">
+                                                            <use xlink:href="#flame"></use>
+                                                        </svg>
+                                                        <div class="franchise-catalog__card-achievements-card-text">
+                                                            Популярная франшиза
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <div class="franchise-catalog__card-main-info-investments-table">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                Инвестиции
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Прибыль
+                                                            </th>
+                                                            <td>
+                                                                160 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Количество точек
+                                                            </th>
+                                                            <td>
+                                                                550
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Собственных точек
+                                                            </th>
+                                                            <td>
+                                                                3
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Окупаемость
+                                                            </th>
+                                                            <td>
+                                                                2 месяца
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                Паушальный взнос
+                                                            </th>
+                                                            <td>
+                                                                200 000 ₽
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-main-info-content-row">
+                                        <div class="franchise-catalog__card-main-info-content-col">
+                                            <a href="#" class="franchise-catalog__card-main-info-detailed-description">
+                                                <span>
+                                                    Подробное описание
+                                                </span>
+                                                <span>
+                                                    Скрыть
+                                                </span>
+
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="franchise-catalog__card-main-info-content-col franchise-catalog__card-main-info-content-col--no-border">
+                                            <ul class="franchise-catalog__card-main-info-ratings-list">
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/1.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        7,8
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/2.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,2
+                                                    </div>
+                                                </li>
+                                                <li class="franchise-catalog__card-main-info-ratings-list-item">
+                                                    <div class="franchise-catalog__card-main-info-ratings-card">
+                                                        <img src="img/services/3.png" alt=""
+                                                            class="franchise-catalog__card-main-info-ratings-card-logo">
+                                                        8,1
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="franchise-catalog__card-detail-info">
+                                <div class="franchise-catalog__card-detail-info-inner">
+                                    <div class="franchise-catalog__card-detail-text-info">
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                отличия от конкурентов
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Стрижка за 15 минут
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по СЭС
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Все по единой цене
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Вид товаров/услуг
+                                            </h4>
+                                            <ul class="franchise-catalog__card-detail-info-block-list">
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Мужские/Женские стрижки — 200 ₽
+                                                </li>
+                                                <li class="franchise-catalog__card-detail-info-block-list-item">
+                                                    Окрашивание — 1500 ₽
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Целевая аудитория
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-tags">
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Школьники
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Студенты
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Мужчины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Женщины
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Сотрудники со средним и нижним доходом
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-detail-info-block-tag">
+                                                    Пенсионеры
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="franchise-catalog__card-detail-info-block">
+                                            <h4 class="franchise-catalog__card-detail-info-block-heading">
+                                                Требования к помещению
+                                            </h4>
+                                            <div class="franchise-catalog__card-detail-info-block-text">
+                                                <p>
+                                                    Площадь 25 квадратов, высокая проходимость.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="franchise-catalog__card-video-block">
+                                        <a href="#" class="franchise-catalog__card-video-wrapper">
+                                            <img src="img/video-preview.jpg" alt=""
+                                                class="franchise-catalog__card-video-preview-image">
+                                            <div class="franchise-catalog__card-video-watch-video">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-watch-video">
+                                                    <use xlink:href="#watch-video"></use>
+                                                </svg>
+                                                Смотреть видео
+                                            </div>
+                                        </a>
+                                        <div class="franchise-catalog__card-video-block-info">
+                                            <div class="franchise-catalog__card-video-block-btns">
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-star">
+                                                        <use xlink:href="#star"></use>
+                                                    </svg>
+                                                    В избранное
+                                                </a>
+                                                <a href="#" class="franchise-catalog__card-video-block-btn">
+                                                    <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                                        <use xlink:href="#stats"></use>
+                                                    </svg>
+                                                    К сравнению
+                                                </a>
+                                            </div>
+                                            <a href="#" class="franchise-catalog__card-video-block-learn-more">
+                                                Узнать больше
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="franchise-catalog__controls-wrapper">
+                    <a href="#" class="franchise-catalog__more-btn">
+                        Еще 145 франшиз в каталоге
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-news">
+    <div class="container">
+        <h2 class="project-news__heading">
+            <a href="#" class="project-news__heading-link">
+                Новости о проекте
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                    <use xlink:href="#fat-arrow-right"></use>
+                </svg>
+            </a>
+
+        </h2>
+        <div class="project-news__slider js-project-news-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-backplate">
+
+                            </div>
+                            <h3 class="project-news__slider-card-title">
+                                Россияне стали самыми экономными в Европе
+                            </h3>
+                            <div class="project-news__slider-card-date">
+                                3 февраля
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-backplate">
+
+                            </div>
+                            <h3 class="project-news__slider-card-title">
+                                H&M откроет в России ещё две сети магазинов
+                            </h3>
+                            <div class="project-news__slider-card-date">
+                                3 февраля
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-backplate">
+
+                            </div>
+                            <h3 class="project-news__slider-card-title">
+                                H&M откроет в России ещё две сети магазинов
+                            </h3>
+                            <div class="project-news__slider-card-date">
+                                3 февраля
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="project-news__slider-card">
+                            <div class="project-news__slider-card-backplate">
+
+                            </div>
+                            <h3 class="project-news__slider-card-title">
+                                В центре Петербурга закрываются рестораны и бары
+                            </h3>
+                            <div class="project-news__slider-card-date">
+                                3 февраля
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="actions">
+    <div class="container">
+        <ul class="actions__list">
+            <li class="actions__list-item">
+                <div class="actions__card">
+                    <h3 class="actions__card-title">
+                        Добавьте свою франшизу и 20 000 000 пользователей увидят&nbsp;ее
+                    </h3>
+                    <a href="#" class="actions__link">
+                        Добавить франшизу
+                        <svg width="14" height="14" aria-hidden="true" class="icon-plus">
+                            <use xlink:href="#plus"></use>
+                        </svg>
+                    </a>
+                </div>
+            </li>
+            <li class="actions__list-item">
+                <div class="actions__card">
+                    <h3 class="actions__card-title">
+                        Зарегистрируйтесь на сайте и получайте доступ к закрытой информации
+                    </h3>
+                    <a href="#" class="actions__link">
+                        Зарегистрироваться
+                        <svg width="14" height="14" aria-hidden="true" class="icon-person">
+                            <use xlink:href="#person"></use>
+                        </svg>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,90 @@
+.actions {
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        margin-bottom: 5rem;
+    }
+}
+
+.actions__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.actions__list-item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(odd) {
+        background-color: var(--primary-color);
+
+        .actions__link {
+            background-color: black;
+        }
+    }
+
+    &:nth-child(even) {
+        background-color: black;
+
+        .actions__link {
+            background-color: var(--primary-color);
+        }
+    }
+}
+
+.actions__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: white;
+    padding: 6rem;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem var(--content-padding);
+    }
+}
+
+.actions__card-title {
+    font-weight: bold;
+    font-size: 3.4rem;
+    line-height: 4rem;
+    letter-spacing: -0.04rem;
+    margin-bottom: 8rem;
+    max-width: 60rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+}
+
+.actions__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 2.2rem;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: .4rem;
+    margin-top: auto;
+    align-self: flex-start;
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        flex-shrink: 0;
+        margin-left: 1.7rem;
+        fill: white;
+    }
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
