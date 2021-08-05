@@ -13,6 +13,7 @@ export default function modals() {
                 reserveScrollBarGap: true
             });
             modal.classList.add('active');
+            document.body.classList.add('modal-open');
             activeModal = modal;
 
             const openModalEvent = new CustomEvent('openmodal');
@@ -25,6 +26,7 @@ export default function modals() {
     function closeModal(modal) {
         unlockScroll();
         modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
         activeModal = null;
 
         const closeModalEvent = new CustomEvent('closemodal');

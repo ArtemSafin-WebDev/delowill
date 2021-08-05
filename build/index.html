@@ -56,6 +56,7 @@
                         </a>
         
                     </div>
+        
                     <a href="#" class="page-header__catalog-link">
                         Каталог
                     </a>
@@ -97,6 +98,7 @@
                             </svg>
                         </a>
                     </div>
+        
                     <div class="page-header__search">
                         <form action="/" method="GET" class="page-header__search-form">
                             <input type="search" class="page-header__search-form-input">
@@ -7793,35 +7795,37 @@
                     </a>
                 </div>
             </div>
-        </footer>        <div class="mobile-bottom-menu">
-            <div class="container">
-                <div class="mobile-bottom-menu__row">
-                    <a href="#" class="mobile-bottom-menu__link">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-star">
-                            <use xlink:href="#star"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="mobile-bottom-menu__link">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-stats">
-                            <use xlink:href="#stats"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="mobile-bottom-menu__link">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-message">
-                            <use xlink:href="#message"></use>
-                        </svg>
-                        <div class="mobile-bottom-menu__link-notifications">
-        2
-                        </div>
-                    </a>
-                    <a href="#" class="mobile-bottom-menu__link">
-                        <svg width="14" height="14" aria-hidden="true" class="icon-message">
-                            <use xlink:href="#person"></use>
-                        </svg>
-                    </a>
+        </footer>
+            <div class="mobile-bottom-menu">
+                <div class="container">
+                    <div class="mobile-bottom-menu__row">
+                        <a href="#" class="mobile-bottom-menu__link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="mobile-bottom-menu__link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-stats">
+                                <use xlink:href="#stats"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="mobile-bottom-menu__link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-message">
+                                <use xlink:href="#message"></use>
+                            </svg>
+                            <div class="mobile-bottom-menu__link-notifications">
+            2
+                            </div>
+                        </a>
+                        <a href="#" class="mobile-bottom-menu__link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-message">
+                                <use xlink:href="#person"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>        <div class="modal js-modal" id="callback-modal">
+            </div>        
+        <div class="modal js-modal" id="callback-modal">
             <div class="modal__inner">
                 <button class="modal__close js-close-modal">
                     <svg width="14" height="14" aria-hidden="true" class="icon-cross">
@@ -7874,6 +7878,94 @@
                     </h3>
         
                 </form>
+            </div>
+        </div>
+        
+        <div class="modal js-modal" id="poll-modal">
+            <div class="modal__inner modal__inner--poll">
+                <button class="modal__close js-close-modal">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+                <h2 class="account__block-heading">
+                    Анкета
+                </h2>
+                <form action="/" method="POST" class="account__poll-form" data-need-validation="">
+                    <label class="account__block-field account__block-field--centered">
+                        <div class="account__block-field-name">
+                            Чем занимаетесь
+                        </div>
+                        <div class="account__block-select account__block-select--not-required">
+                            <select name="type" class="js-custom-select">
+                                <option value="1">Бизнесмен (мелкий, средний бизнес)</option>
+                                <option value="2">Отдыхаю</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label class="account__block-field account__block-field--centered">
+                        <div class="account__block-field-name">
+                            Сферы работы 3 последние сферы
+                        </div>
+                        <div class="account__block-multiselect">
+                            <select name="type" class="js-multiple-select" multiple="">
+                                <option value="1">Медицина</option>
+                                <option value="2">Образование</option>
+                                <option value="3">Финансы</option>
+                                <option value="4">Туризм</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label class="account__block-field account__block-field--centered">
+                        <div class="account__block-field-name">
+                            Планируете вложить в открытие
+                        </div>
+                        <div class="account__block-select account__block-select--not-required">
+                            <select name="type" class="js-custom-select">
+                                <option value="1">до 500 000 руб.</option>
+                                <option value="2">до 300 000 руб.</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label class="account__block-field account__block-field--centered">
+                        <div class="account__block-field-name">
+                            Понимаете что такое франшиза?
+                        </div>
+                        <div class="account__block-select account__block-select--not-required">
+                            <select name="type" class="js-custom-select">
+                                <option value="1">Да</option>
+                                <option value="2">Нет</option>
+                            </select>
+                        </div>
+                    </label>
+        
+                    <label class="account__block-field">
+                        <div class="account__block-field-name">
+                            Что решит покупка франшизы
+                        </div>
+                        <div class="account__block-select">
+        
+                            <textarea name="comment" class="account__block-input"
+                                placeholder="Опишите какие ваши проблемы закроет покупка франшизы"></textarea>
+                        </div>
+                    </label>
+                    <label class="account__block-field">
+                        <div class="account__block-field-name">
+                            О себе
+                        </div>
+                        <div class="account__block-select">
+        
+                            <textarea name="comment" class="account__block-input"
+                                placeholder="Опишите свой опыт, компетенции или любую другую информацию, полезную для других пользователей"></textarea>
+                        </div>
+                    </label>
+        
+                    <button class="account__submit account__poll-submit" type="submit">
+                        Сохранить
+                    </button>
+                </form>
+        
+        
             </div>
         </div>        <style>
             .ie-placeholder {

@@ -1,4 +1,5 @@
 {
     "title": "Главная",
-    "whiteBg": true
+    "whiteBg": true,
+    "unAuthorized": false
 }

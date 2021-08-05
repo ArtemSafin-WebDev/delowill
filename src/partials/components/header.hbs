@@ -33,6 +33,17 @@
                 </a>
 
             </div>
+
+            {{#if unAuthorized }}
+                <div class="page-header__auth-links">
+                    <a href="#" class="page-header__auth-link">
+                        Войти
+                    </a>
+                    <a href="#" class="page-header__auth-link page-header__auth-link--blue">
+                        Зарегистрироваться
+                    </a>
+                </div>
+            {{else}}
             <a href="#" class="page-header__catalog-link">
                 Каталог
             </a>
@@ -74,6 +85,8 @@
                     </svg>
                 </a>
             </div>
+            {{/if}}
+
             <div class="page-header__search">
                 <form action="/" method="GET" class="page-header__search-form">
                     <input type="search" class="page-header__search-form-input">

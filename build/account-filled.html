@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Регистрация
+        Личный кабинет
     </title>
 </head>
 
@@ -115,79 +115,152 @@
         </header>        <main class="page-main">
 
 
-<section class="register-select">
+
+
+<section class="account">
+    <div class="account__nav">
+        <div class="container">
+            <div class="account__nav-row">
+                <div class="account__nav-links">
+                    <a href="#" class="account__nav-link active">
+                        мой профиль
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        мои франшизы
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        чат
+                        <span class="account__nav-link-notifications">
+                            <span class="account__nav-link-notifications-text">
+                                3
+                            </span>
+
+                        </span>
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        уведомления
+                        <span class="account__nav-link-notifications">
+
+                            <span class="account__nav-link-notifications-text">
+                                4
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        документы
+                    </a>
+                    <a href="#" class="account__nav-link">
+                        настройки
+                    </a>
+                </div>
+
+                <a href="#" class="account__logout-link">
+                    выйти
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="register-select__content">
-            <div class="inner-container">
-                <div class="register-select__row">
-                    <div class="register-select__col">
-                        <div class="register-select__card">
-                            <img src="img/register-select-1.svg" alt="" class="register-select__card-icon">
-                            <div class="register-select__card-content">
 
-
-                                <h3 class="register-select__card-heading">
-                                    Пользователь сервиса
-                                </h3>
-                                <div class="register-select__card-text">
-                                    <p>
-                                        Зарегистрируйтесь и получите полный доступ к сервису Delowill:
-                                    </p>
+        <div class="inner-container">
+            <div class="account__info">
+                <h1 class="account__heading">
+                    Мой профиль
+                </h1>
+                <div class="account__row">
+                    <form method="POST" action="/" class="account__data-form" data-need-validation="">
+                        <div class="account__block">
+                            <h2 class="account__block-heading">
+                                персональные данные
+                            </h2>
+                            
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    ФИО
                                 </div>
-                                <ul class="register-select__card-list">
-                                    <li class="register-select__card-list-item">
-                                        Более 1000 франшиз в одном месте
-                                    </li>
-                                    <li class="register-select__card-list-item">
-                                        Мы знаем всё о франшиза
-                                    </li>
-                                    <li class="register-select__card-list-item">
-                                        Агрегатор честных франшиз
-                                    </li>
-                                </ul>
+                                <div class="account__block-input-wrapper">
+                                    <input type="text" name="name" class="account__block-input" required
+                                        value="Иванов Анатолий Витальевич">
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Город
+                                </div>
+                                <div class="account__block-select">
+                                    <select name="city" class="js-custom-select">
+                                        <option value="Казань" selected>Казань</option>
+                                        <option value="Москва">Москва</option>
+                                    </select>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Дата рождения
+                                </div>
+                                <div class="account__block-input-wrapper" id="picker-container">
+                                    <input type="tel"
+                                        class="account__block-input account__block-input--date js-datepicker"
+                                        value="26-08-1992" required readonly>
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    Телефон
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="tel" class="account__block-input js-phone-input" name="phone"
+                                        data-parsley-phone="" value="+7 (987)419-41-91">
+                                </div>
+                            </label>
+                            <label class="account__block-field">
+                                <div class="account__block-field-name">
+                                    E-mail
+                                </div>
+                                <div class="account__block-input-wrapper">
+                                    <input type="email" class="account__block-input" name="email" required value="anatoliy@info.ru">
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div class="account__controls">
+
+
+                            <button class="account__submit" type="submit">
+                                Редактировать профиль
+                            </button>
+                        </div>
+                    </form>
+                    <div class="account__poll">
+                        <div class="account__block">
+                            <h2 class="account__block-heading">
+                                анкета
+                            </h2>
+                            <div class="account__poll-text">
+                                <p>
+                                    Для получения доступа ко всем функциям личного кабинета небходимо пройти
+                                    верификацию ИНН
+                                </p>
                             </div>
-                            <a href="#" class="register-select__card-link">
-                                Регистрация
+
+                            <div class="account__poll-link account__poll-link--success">
+                                Анкета заполнена
+                                <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                                    <use xlink:href="#success"></use>
+                                </svg>
+                            </div>
+
+                            <a href="#poll-modal" class="account__edit-poll js-open-modal">
+                                Редактировать анкету
                             </a>
-                            <div class="register-select__card-link-remark">
-                                Это займет 2 минуты
-                            </div>
+
+
+
                         </div>
                     </div>
-                    <div class="register-select__col">
-                        <div class="register-select__card">
-                            <img src="img/register-select-2.svg" alt="" class="register-select__card-icon">
-                            <div class="register-select__card-content">
 
 
-                                <h3 class="register-select__card-heading">
-                                    Управляющая компания
-                                </h3>
-                                <div class="register-select__card-text">
-                                    <p>
-                                        Зарегистрируйтесь и получите полный доступ к сервису Delowill:
-                                    </p>
-                                </div>
-                                <ul class="register-select__card-list">
-                                    <li class="register-select__card-list-item">
-                                        Размещение франшиз на сервисе
-                                    </li>
-                                    <li class="register-select__card-list-item">
-                                        Статистика по вашим франшизам
-                                    </li>
-                                    <li class="register-select__card-list-item">
-                                        Интеграция с Amo CRM
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#" class="register-select__card-link">
-                                Регистрация
-                            </a>
-                            <div class="register-select__card-link-remark">
-                                Это займет 2 минуты
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -196,6 +269,30 @@
 </section>
 
 
+<section class="add-franchise">
+    <div class="container">
+        <div class="inner-container">
+            <div class="add-franchise__row">
+                <div class="add-franchise__col">
+                    <h2 class="add-franchise__heading">
+                        Добавьте франшизу
+                    </h2>
+                    <div class="add-franchise__text">
+                        <p>
+                            Для получения доступа ко всем функциям личного кабинета небходимо пройти верификацию ИНН
+                        </p>
+                    </div>
+                    <a href="#" class="add-franchise__link">
+                        Добавить франшизу
+                    </a>
+                </div>
+                <div class="add-franchise__col">
+                    <img src="img/add-franchise.svg" alt="" class="add-franchise__image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         </main>
         <footer class="page-footer">

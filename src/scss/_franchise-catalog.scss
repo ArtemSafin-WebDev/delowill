@@ -487,6 +487,7 @@
     line-height: 2.4rem;
     margin-bottom: 3.5rem;
     width: 100%;
+    transition: background-color .2s, color .2s;
 
     @include breakpoint(mobile) {
         width: 100%;
@@ -495,6 +496,11 @@
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }
 
@@ -986,7 +992,7 @@
     color: var(--text-color);
     margin-right: 0.6rem;
     margin-bottom: 0.6rem;
-    white-space: nowrap;
+    // white-space: nowrap;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 0.4rem;
 
@@ -1134,10 +1140,16 @@
     line-height: 1.2;
     font-family: var(--gotham);
     color: var(--primary-color);
+    transition: background-color .2s, color .2s;
 
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }
 
@@ -1163,12 +1175,17 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     padding: 1.5rem 3.6rem;
-
+    transition: background-color .2s, color .2s;
     @include breakpoint(mobile) {
         display: flex;
     }
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }

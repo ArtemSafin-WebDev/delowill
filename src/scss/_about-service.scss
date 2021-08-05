@@ -1,12 +1,11 @@
 .about-service {
     margin-bottom: 6.5rem;
 
-    
     color: white;
 
     margin-top: 7.5rem;
     @include breakpoint(mobile) {
-        margin-top: 5.8rem;
+        margin-top: 0;
         margin-bottom: 0rem;
     }
 }
@@ -103,7 +102,6 @@
     }
 }
 
-
 .about-service__controls {
     display: flex;
     align-items: center;
@@ -122,15 +120,13 @@
         margin-right: 2rem;
         flex-shrink: 0;
         fill: var(--primary-color);
-        margin-top: .6rem;
+        margin-top: 0.6rem;
     }
 }
 
 .about-service__total-content {
     display: flex;
     flex-direction: column;
-
-
 }
 
 .about-service__total-title {
@@ -150,16 +146,20 @@
     display: inline-block;
     text-align: center;
     padding: 1.5rem 2.2rem;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     background-color: var(--primary-color);
     color: white;
-
+    transition: background-color .2s;
     &:link,
     &:visited {
         color: white;
     }
-}
 
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
+    }
+}
 
 .about-service__features-list-item {
     padding: 5rem;
@@ -167,7 +167,7 @@
     align-items: center;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    border: 1px solid rgba(white, .3);
+    border: 1px solid rgba(white, 0.3);
     border-bottom: none;
 
     @include breakpoint(mobile) {
@@ -181,7 +181,7 @@
     &:last-child {
         border-bottom-left-radius: 1.2rem;
         border-bottom-right-radius: 1.2rem;
-        border-bottom: 1px solid rgba(white, .3);
+        border-bottom: 1px solid rgba(white, 0.3);
     }
     svg {
         flex-shrink: 0;

@@ -60,20 +60,14 @@
                             <h2 class="account__block-heading">
                                 персональные данные
                             </h2>
-                            <label class="account__block-field">
-                                <div class="account__block-field-name">
-                                    Название компании
-                                </div>
-                                <div class="account__block-input-wrapper">
-                                    <input type="text" class="account__block-input" name="company-name" required>
-                                </div>
-                            </label>
+                            
                             <label class="account__block-field">
                                 <div class="account__block-field-name">
                                     ФИО
                                 </div>
                                 <div class="account__block-input-wrapper">
-                                    <input type="text" name="name" class="account__block-input" required>
+                                    <input type="text" name="name" class="account__block-input" required
+                                        value="Иванов Анатолий Витальевич">
                                 </div>
                             </label>
                             <label class="account__block-field">
@@ -82,7 +76,7 @@
                                 </div>
                                 <div class="account__block-select">
                                     <select name="city" class="js-custom-select">
-                                        <option value="Казань">Казань</option>
+                                        <option value="Казань" selected>Казань</option>
                                         <option value="Москва">Москва</option>
                                     </select>
                                 </div>
@@ -93,31 +87,17 @@
                                 </div>
                                 <div class="account__block-input-wrapper" id="picker-container">
                                     <input type="tel"
-                                        class="account__block-input account__block-input--date js-datepicker" required
-                                        readonly>
+                                        class="account__block-input account__block-input--date js-datepicker"
+                                        value="26-08-1992" required readonly>
                                 </div>
                             </label>
-                            <label class="account__block-field">
-                                <div class="account__block-field-name">
-                                    О компании
-                                </div>
-                                <div class="account__block-select">
-
-                                    <textarea name="comment" class="account__block-input"></textarea>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="account__block">
-                            <h2 class="account__block-heading">
-                                Данные аккаунта
-                            </h2>
                             <label class="account__block-field">
                                 <div class="account__block-field-name">
                                     Телефон
                                 </div>
                                 <div class="account__block-input-wrapper">
                                     <input type="tel" class="account__block-input js-phone-input" name="phone"
-                                        data-parsley-phone="">
+                                        data-parsley-phone="" value="+7 (987)419-41-91">
                                 </div>
                             </label>
                             <label class="account__block-field">
@@ -125,48 +105,17 @@
                                     E-mail
                                 </div>
                                 <div class="account__block-input-wrapper">
-                                    <input type="email" class="account__block-input" name="email" required>
-                                </div>
-                            </label>
-                            <label class="account__block-field">
-                                <div class="account__block-field-name">
-                                    Пароль
-                                </div>
-                                <div class="account__block-input-wrapper">
-                                    <input type="password" class="account__block-input" name="password" required>
-                                </div>
-                            </label>
-                            <label class="account__block-field">
-                                <div class="account__block-field-name">
-                                    Повторите пароль
-                                </div>
-                                <div class="account__block-input-wrapper">
-                                    <input type="password" class="account__block-input" name="password-confirmation"
-                                        required>
+                                    <input type="email" class="account__block-input" name="email" required value="anatoliy@info.ru">
                                 </div>
                             </label>
                         </div>
-                        <div class="account__legend">
-                            — Обязательные поля для заполнения
-                        </div>
+
 
                         <div class="account__controls">
-                            <label class="account__checkbox">
-                                <input type="checkbox" name="policy" checked class="account__checkbox-input">
-                                <span class="account__checkbox-mark">
-                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                        <use xlink:href="#checkmark"></use>
-                                    </svg>
-                                </span>
-                                <span class="account__checkbox-text">
-                                    Согласие на обработку <a href="#">
-                                        персональных данных
-                                    </a>
-                                </span>
-                            </label>
+
 
                             <button class="account__submit" type="submit">
-                                Сохранить
+                                Редактировать профиль
                             </button>
                         </div>
                     </form>
@@ -181,11 +130,20 @@
                                     верификацию ИНН
                                 </p>
                             </div>
-                            <a href="#poll-modal" class="account__poll-link js-open-modal">
-                                Заполнить анкету
+
+                            <div class="account__poll-link account__poll-link--success">
+                                Анкета заполнена
+                                <svg width="14" height="14" aria-hidden="true" class="icon-success">
+                                    <use xlink:href="#success"></use>
+                                </svg>
+                            </div>
+
+                            <a href="#poll-modal" class="account__edit-poll js-open-modal">
+                                Редактировать анкету
                             </a>
 
-                          
+
+
                         </div>
                     </div>
 

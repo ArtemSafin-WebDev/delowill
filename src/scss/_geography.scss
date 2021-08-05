@@ -302,8 +302,14 @@
     border-radius: .4rem;
     font-family: var(--gotham);
     align-self: flex-start;
+    transition: color .2s, background-color .2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }

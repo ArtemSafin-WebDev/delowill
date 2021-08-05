@@ -10,6 +10,7 @@
     --max-container-width: 150rem;
     --content-padding: 6rem;
     --primary-color: #4659ff;
+    --primary-color-hover: rgb(51, 70, 240);
     --text-color: #000;
     --grey-text: #a0a7b2;
     --gotham: 'Gotham Pro Narrow', sans-serif;
@@ -30,20 +31,10 @@ html {
 
     @include noHighlight();
 
-    @include breakpoint(desktop) {
-        font-size: 9px;
-    }
+    
 
-    @include breakpoint(laptop) {
-        font-size: 8px;
-    }
-    @include breakpoint(tablet) {
-        font-size: 7px;
-    }
+    font-size: clamp(5px, 0.76vw, 10px);
 
-    @include breakpoint(small-tablet) {
-        font-size: 6px;
-    }
 
     @include breakpoint(mobile) {
         font-size: 9px;

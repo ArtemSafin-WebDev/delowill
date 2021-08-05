@@ -15,6 +15,12 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+    @include customScrollbar();
+
+    body:not(.loaded) & {
+        display: none;
+    }
+
     &:not(.active) {
         right: calc(-1 * var(--sb-width, 0));
     }
@@ -36,6 +42,10 @@
     color: var(--text-color);
     background-color: #fff;
     position: relative;
+
+    &--poll {
+        max-width: 80rem;
+    }
 
     @include breakpoint(mobile) {
         padding: 3rem;

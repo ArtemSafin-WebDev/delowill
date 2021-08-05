@@ -134,9 +134,9 @@
 .main-filters__checkbox-text {
     font-weight: bold;
     font-size: 1.8rem;
-    line-height: 2.6rem;
+    line-height: 1.2;
     transition: color 0.2s;
-    margin-top: -0.1rem;
+    
 }
 
 .main-filters__checkbox-count {
@@ -442,8 +442,14 @@
     font-family: var(--gotham);
     color: white;
 
+    transition: background-color .2s, color .2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color-hover);
     }
 }
