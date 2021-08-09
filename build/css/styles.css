@@ -3221,9 +3221,9 @@ select:-webkit-autofill:focus {
   -webkit-transition: border-color 0.2s, background-color 0.2s, color 0.2s;
   transition: border-color 0.2s, background-color 0.2s, color 0.2s;
   padding: 1.3rem 2.2rem;
-  border: 1px solid var(--primary-color);
+  border: 1px solid #39B833;
   border-radius: 0.4rem;
-  color: var(--primary-color);
+  color: #39B833;
 }
 @media only screen and (max-width: 640px) {
   .goods__download-link {
@@ -3247,10 +3247,10 @@ select:-webkit-autofill:focus {
   margin-left: 1.6rem;
 }
 .goods__download-link:link, .goods__download-link:visited {
-  color: var(--primary-color);
+  color: #39B833;
 }
 .no-touch .goods__download-link:hover, .touch .goods__download-link:active {
-  background-color: var(--primary-color);
+  background-color: #39B833;
   color: white;
 }
 
@@ -3706,7 +3706,7 @@ select:-webkit-autofill:focus {
 }
 
 .faq__content {
-  background: #000000;
+  background: #303251;
   color: white;
 }
 
@@ -4605,8 +4605,8 @@ select:-webkit-autofill:focus {
 
 .franchise-info__heading {
   font-weight: bold;
-  font-size: 4.6rem;
-  line-height: 5.6rem;
+  font-size: 3.8rem;
+  line-height: 4rem;
   margin-bottom: 4rem;
 }
 @media only screen and (max-width: 640px) {
@@ -4779,10 +4779,9 @@ select:-webkit-autofill:focus {
 
 .franchise-info__about-card-title {
   font-weight: bold;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.04rem;
   margin-bottom: 2rem;
 }
 
@@ -4804,18 +4803,7 @@ select:-webkit-autofill:focus {
 }
 .franchise-info__about-card-content ul li {
   position: relative;
-  margin-bottom: 1rem;
-}
-.franchise-info__about-card-content ul li::before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 0.9rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background-color: #000;
-  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 .franchise-info__about-card-content ul li:last-child {
   margin-bottom: 0;
@@ -4928,6 +4916,7 @@ select:-webkit-autofill:focus {
   line-height: 1.6rem;
   font-weight: 400;
   margin-bottom: 0.8rem;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .franchise-info__calculation-block-text {
@@ -4945,8 +4934,9 @@ select:-webkit-autofill:focus {
 
 .franchise-info__detailed-analysis {
   font-weight: bold;
-  font-size: 4.6rem;
-  line-height: 5.6rem;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  letter-spacing: -0.04rem;
   color: white;
   background: url("../img/purple-blur.svg"), url("../img/delowill-light.svg"), linear-gradient(96.16deg, #7c88ff -34.71%, #4659ff 118.45%);
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -5003,7 +4993,7 @@ select:-webkit-autofill:focus {
   font-size: 2.6rem;
   line-height: 3.2rem;
   letter-spacing: -0.04rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 @media only screen and (max-width: 640px) {
   .format__specs-heading {
@@ -5014,14 +5004,12 @@ select:-webkit-autofill:focus {
 }
 
 .format__specs-table {
-  border-top: 0.4rem solid #e4e6f9;
-  border-bottom: 0.4rem solid #e4e6f9;
-  padding: 5rem 0;
+  border-top: 1px solid #e4e6f9;
+  padding: 3.8rem 0;
 }
 @media only screen and (max-width: 640px) {
   .format__specs-table {
     border-top: 0.3rem solid #e4e6f9;
-    border-bottom: 0.3rem solid #e4e6f9;
     padding: 2.5rem 0;
   }
 }
@@ -5039,7 +5027,7 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 @media only screen and (max-width: 640px) {
   .format__specs-table table tr {
@@ -5061,6 +5049,9 @@ select:-webkit-autofill:focus {
 .format__specs-table table td {
     font-size: 1.6rem;
   }
+}
+.format__specs-table table th {
+  color: #A0A7B2;
 }
 @media only screen and (max-width: 640px) {
   .format__specs-table table th {
@@ -5914,7 +5905,7 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.4rem 2.2rem;
-  border: 1px solid #4659ff;
+  border: 1px solid #39B833;
   border-radius: 0.4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -5925,12 +5916,12 @@ select:-webkit-autofill:focus {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-family: var(--gotham);
-  color: var(--primary-color);
+  color: #39B833;
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
 }
 .financial-model__detailed-calculation-link:link, .financial-model__detailed-calculation-link:visited {
-  color: var(--primary-color);
+  color: #39B833;
 }
 .financial-model__detailed-calculation-link svg {
   width: 1.6rem;
@@ -5941,7 +5932,7 @@ select:-webkit-autofill:focus {
   margin-left: 1.8rem;
 }
 .no-touch .financial-model__detailed-calculation-link:hover, .touch .financial-model__detailed-calculation-link:active {
-  background-color: var(--primary-color);
+  background-color: #39B833;
   color: white;
 }
 
@@ -6110,7 +6101,7 @@ select:-webkit-autofill:focus {
 .financial-model__numbers-form-table tr.blue td,
 .financial-model__numbers-form-table tr.blue th {
   font-weight: 700;
-  color: var(--primary-color);
+  color: #39B833;
 }
 .financial-model__numbers-form-table tbody tr {
   margin-bottom: 1.5rem;
@@ -6119,7 +6110,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 0;
 }
 .financial-model__numbers-form-table thead tr {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .financial-model__numbers-form-table td,
 .financial-model__numbers-form-table th {
@@ -6129,7 +6120,8 @@ select:-webkit-autofill:focus {
   color: #a0a7b2;
 }
 .financial-model__numbers-form-table thead th {
-  color: var(--primary-color);
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 .financial-model__numbers-input-wrapper {
@@ -9562,8 +9554,9 @@ textarea.account__block-input {
 
 .why-best__heading {
   font-weight: bold;
-  font-size: 4.6rem;
-  line-height: 5.6rem;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  letter-spacing: -0.04rem;
   margin-bottom: 6.5rem;
 }
 @media only screen and (max-width: 640px) {
@@ -9607,12 +9600,12 @@ textarea.account__block-input {
 .why-best__card::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0.55rem;
-  width: 2rem;
-  height: 2rem;
+  left: 1rem;
+  top: 0.65rem;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
-  background-color: #5061FF;
+  background-color: #5061ff;
 }
 @media only screen and (max-width: 640px) {
   .why-best__card::before {
@@ -9621,26 +9614,20 @@ textarea.account__block-input {
     top: 0.5rem;
   }
 }
-.why-best__card--violet::before {
-  background-color: #8373EF;
-}
 
 .why-best__card-title {
   font-weight: bold;
-  font-size: 2.6rem;
-  line-height: 3.2rem;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   letter-spacing: -0.04rem;
-  margin-bottom: 0.8rem;
-  color: #5061FF;
+  margin-bottom: 1rem;
+  color: #5061ff;
 }
 @media only screen and (max-width: 640px) {
   .why-best__card-title {
     font-size: 1.82rem;
     line-height: 1.2;
   }
-}
-.why-best__card--violet .why-best__card-title {
-  color: #8373EF;
 }
 
 .why-best__card-text {
@@ -9660,7 +9647,7 @@ textarea.account__block-input {
   color: white;
 }
 .what-is-next__content--darker {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(-96.16deg, #7C88FF -34.71%, #4659FF 118.45%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(-96.16deg, #7c88ff -34.71%, #4659ff 118.45%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .what-is-next__heading {
@@ -9700,7 +9687,7 @@ textarea.account__block-input {
 
 .what-is-next__text {
   position: relative;
-  padding-left: 4.5rem;
+  padding-left: 3.5rem;
   font-size: 2rem;
   line-height: 130%;
 }
@@ -9715,9 +9702,9 @@ textarea.account__block-input {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.2rem;
-  width: 2rem;
-  height: 2rem;
+  top: 0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -9745,15 +9732,15 @@ textarea.account__block-input {
           justify-content: center;
   background-color: #fff;
   border-radius: 0.4rem;
-  color: var(--primary-color);
+  color: #39b833;
   padding: 1.5rem 2.5rem;
   font-family: var(--gotham);
 }
 .what-is-next__link:link, .what-is-next__link:visited {
-  color: var(--primary-color);
+  color: #39b833;
 }
 .no-touch .what-is-next__link:hover .what-is-next__link-icon, .touch .what-is-next__link:active .what-is-next__link-icon {
-  color: var(--primary-color);
+  color: #39b833;
 }
 
 .what-is-next__link-icon {
@@ -9770,7 +9757,7 @@ textarea.account__block-input {
   display: block;
   width: 100%;
   height: 100%;
-  fill: var(--primary-color);
+  fill: #39b833;
 }
 
 .mobile-bottom-menu {

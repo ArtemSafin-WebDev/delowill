@@ -3,7 +3,8 @@
     color: white;
 
     &--darker {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(-96.16deg, #7C88FF -34.71%, #4659FF 118.45%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(-96.16deg, #7c88ff -34.71%, #4659ff 118.45%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     }
 }
 
@@ -39,7 +40,7 @@
 
 .what-is-next__text {
     position: relative;
-    padding-left: 4.5rem;
+    padding-left: 3.5rem;
     font-size: 2rem;
     line-height: 130%;
 
@@ -52,16 +53,16 @@
         content: '';
         position: absolute;
         left: 0;
-        top: .2rem;
-        width: 2rem;
-        height: 2rem;
+        top: 0.6rem;
+        width: 1.2rem;
+        height: 1.2rem;
         border-radius: 50%;
         background-color: #fff;
 
         @include breakpoint(mobile) {
-            width: .8rem;
-            height: .8rem;
-            top: .42rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            top: 0.42rem;
         }
     }
 }
@@ -77,18 +78,18 @@
 
     background-color: #fff;
     border-radius: 0.4rem;
-    color: var(--primary-color);
+    color: #39b833;
     padding: 1.5rem 2.5rem;
     font-family: var(--gotham);
     &:link,
     &:visited {
-        color: var(--primary-color);
+        color: #39b833;
     }
 
     .no-touch &:hover,
     .touch &:active {
         .what-is-next__link-icon {
-            color: var(--primary-color);
+            color: #39b833;
         }
     }
 }
@@ -104,6 +105,6 @@
         display: block;
         width: 100%;
         height: 100%;
-        fill: var(--primary-color);
+        fill: #39b833;
     }
 }

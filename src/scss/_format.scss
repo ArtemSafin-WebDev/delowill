@@ -29,7 +29,7 @@
     font-size: 2.6rem;
     line-height: 3.2rem;
     letter-spacing: -0.04rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
 
     @include breakpoint(mobile) {
         font-size: 2.4rem;
@@ -39,13 +39,13 @@
 }
 
 .format__specs-table {
-    border-top: 0.4rem solid #e4e6f9;
-    border-bottom: 0.4rem solid #e4e6f9;
-    padding: 5rem 0;
+    border-top: 1px solid #e4e6f9;
+    
+    padding: 3.8rem 0;
 
     @include breakpoint(mobile) {
         border-top: 0.3rem solid #e4e6f9;
-        border-bottom: 0.3rem solid #e4e6f9;
+        
         padding: 2.5rem 0;
     }
 
@@ -64,7 +64,7 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             grid-gap: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
 
             @include breakpoint(mobile) {
                 grid-gap: .5rem;
@@ -88,6 +88,7 @@
         }
 
         th {
+            color: #A0A7B2;
             @include breakpoint(mobile) {
                 color: var(--primary-color);
                 font-weight: 500;
