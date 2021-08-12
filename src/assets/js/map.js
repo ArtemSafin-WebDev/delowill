@@ -20,168 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 iconImageOffset: [-11.5, -11.5]
             };
 
-            var center = [55.796554, 49.104752];
+            const center = [55.796554, 49.104752];
 
-            var pointsMapData = [
-                {
-                    coords: [55.831082, 49.079644],
-                    open: false,
-                    content: `
-                        <div class="geography__popover-content">
-                            <div class="geography__popover-content-info-block">
-                                <h4 class="geography__popover-content-info-block-heading">
-                                    Адрес
-                                </h4>
-                                <div class="geography__popover-content-info-block-text">
-                                    ул. Декабристов, 131Е
-                                </div>
-                            </div>
-                            <div class="geography__popover-content-info-block">
-                                <h4 class="geography__popover-content-info-block-heading">
-                                    Оборот
-                                </h4>
-                                <div class="geography__popover-content-info-block-text">
-                                    500 000 ₽
-                                </div>
-                            </div>
-                            <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                        </div>
-                    `
-                },
-                {
-                    coords: [55.815159, 49.101276],
-                    open: true,
-                    content: `
-                    <div class="geography__popover-content">
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Адрес
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                ул. Декабристов, 131Е
-                            </div>
-                        </div>
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Оборот
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                500 000 ₽
-                            </div>
-                        </div>
-                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                    </div>
-                `
-                },
-                {
-                    coords: [55.812957, 49.183735],
-                    open: false,
-                    content: `
-                    <div class="geography__popover-content">
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Адрес
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                ул. Декабристов, 131Е
-                            </div>
-                        </div>
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Оборот
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                500 000 ₽
-                            </div>
-                        </div>
-                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                    </div>
-                `
-                },
-                {
-                    coords: [55.79474, 49.114071],
-                    open: false,
-                    content: `
-                    <div class="geography__popover-content">
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Адрес
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                ул. Декабристов, 131Е
-                            </div>
-                        </div>
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Оборот
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                500 000 ₽
-                            </div>
-                        </div>
-                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                    </div>
-                `
-                },
-                {
-                    coords: [55.833308, 49.132141],
-                    open: true,
-                    content: `
-                        <div class="geography__popover-content">
-                            <div class="geography__popover-content-info-block">
-                                <h4 class="geography__popover-content-info-block-heading">
-                                    Адрес
-                                </h4>
-                                <div class="geography__popover-content-info-block-text">
-                                    ул. Декабристов, 131Е
-                                </div>
-                            </div>
-                            <div class="geography__popover-content-info-block">
-                                <h4 class="geography__popover-content-info-block-heading">
-                                    Оборот
-                                </h4>
-                                <div class="geography__popover-content-info-block-text">
-                                    500 000 ₽
-                                </div>
-                            </div>
-                            <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                        </div>
-                    `
-                },
-                {
-                    coords: [55.776266, 49.140724],
-                    open: false,
-                    content: `
-                    <div class="geography__popover-content">
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Адрес
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                ул. Декабристов, 131Е
-                            </div>
-                        </div>
-                        <div class="geography__popover-content-info-block">
-                            <h4 class="geography__popover-content-info-block-heading">
-                                Оборот
-                            </h4>
-                            <div class="geography__popover-content-info-block-text">
-                                500 000 ₽
-                            </div>
-                        </div>
-                        <a href="#" class="geography__popover-content-info-block-link">Видео-отзыв</a>
-                    </div>
-                `
-                }
-            ];
+          
 
-            var mapInstance = new ymaps.Map(mapElement, {
+            const mapInstance = new ymaps.Map(mapElement, {
                 center: center,
                 zoom: 10,
                 controls: []
             });
 
-            var zoomControl = new ymaps.control.ZoomControl({
+            const zoomControl = new ymaps.control.ZoomControl({
                 options: {
                     size: 'small',
                     position: {
@@ -333,37 +182,39 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             mapInstance.geoObjects.add(objectManager);
 
-            pointsMapData.forEach(function(item) {
-                var objectToAdd = {
-                    id: item.coords.join('-'),
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: item.coords
-                    },
-                    options: {
-                        ...pin,
-                        balloonShadow: false,
-                        balloonLayout: MyBalloonLayout,
-                        balloonContentLayout: MyBalloonContentLayout,
-                        balloonPanelMaxMapArea: 0,
-                        hideIconOnBalloonOpen: false,
-                        balloonOffset: [0, -20]
-                    },
-                    properties: {
-                        balloonContent: item.content,
-                        balloonHeader: item.title
-                    }
-                };
-
-                if (!item.open) {
-                    objectToAdd.options = {
-                        ...objectToAdd.options,
-                        ...bluePin
+            if (pointsMapData) {
+                pointsMapData.forEach(function(item) {
+                    var objectToAdd = {
+                        id: item.coords.join('-'),
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: item.coords
+                        },
+                        options: {
+                            ...pin,
+                            balloonShadow: false,
+                            balloonLayout: MyBalloonLayout,
+                            balloonContentLayout: MyBalloonContentLayout,
+                            balloonPanelMaxMapArea: 0,
+                            hideIconOnBalloonOpen: false,
+                            balloonOffset: [0, -20]
+                        },
+                        properties: {
+                            balloonContent: item.content,
+                            balloonHeader: item.title
+                        }
                     };
-                }
-                objectManager.add(objectToAdd);
-            });
+
+                    if (!item.open) {
+                        objectToAdd.options = {
+                            ...objectToAdd.options,
+                            ...bluePin
+                        };
+                    }
+                    objectManager.add(objectToAdd);
+                });
+            }
 
             const cityLinks = Array.from(document.querySelectorAll('.geography__city'));
 
@@ -396,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Coords select', parsedCoords);
 
                     mapInstance.setCenter(parsedCoords);
-                })
+                });
             }
         }
     });

@@ -47,9 +47,21 @@
         max-width: 80rem;
     }
 
+    &--video {
+        padding: 0;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        max-width: 86rem;
+    }
+
     @include breakpoint(mobile) {
         padding: 3rem;
         padding-top: 4.5rem;
+
+        &--video {
+            padding: 0;
+        }
     }
 }
 
@@ -71,6 +83,15 @@
         @include breakpoint(mobile) {
             width: 2rem;
             height: 2rem;
+        }
+    }
+
+    &--white {
+        right: 1.5rem;
+        top: 1.5rem;
+        svg {
+            fill: white;
+           
         }
     }
 

@@ -35,7 +35,8 @@
                 </div>
                 <div class="intro__franchise-buttons">
                     <div class="intro__franchise-buttons-col">
-                        <a href="#callback-modal" class="intro__franchise-button intro__franchise-button--filled js-open-modal">
+                        <a href="#callback-modal"
+                            class="intro__franchise-button intro__franchise-button--filled js-open-modal">
                             Написать представителю
                             <div class="intro__franchise-button-icon">
                                 <svg width="14" height="14" aria-hidden="true" class="icon-message">
@@ -348,12 +349,12 @@
                     состав франшизы
                 </a>
                 <a href="#to-geography" class="franchise-navigation__link js-sections-menu-link">
-                    география 
+                    география
                 </a>
                 <a href="#to-faq" class="franchise-navigation__link js-sections-menu-link">
                     вопрос-ответ
                 </a>
-               
+
                 <div class="franchise-navigation__more">
                     <div class="franchise-navigation__btn">
                         еще
@@ -363,10 +364,11 @@
                     </div>
                     <div class="franchise-navigation__more-dropdown">
                         <div class="franchise-navigation__more-dropdown-inner">
-                            <a href="#to-success-stories" class="franchise-navigation__more-dropdown-link js-sections-menu-link">
+                            <a href="#to-success-stories"
+                                class="franchise-navigation__more-dropdown-link js-sections-menu-link">
                                 Истории успеха
                             </a>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -3643,7 +3645,8 @@
                                 Файл будет добавлен в личный кабинет, раздел документы
                             </p>
                         </div>
-                        <a href="#" class="financial-model__detailed-calculation-link">
+                        <a href="#detailed-calculation"
+                            class="financial-model__detailed-calculation-link js-open-modal">
                             Детальный расчет
 
                             <svg width="14" height="14" aria-hidden="true" class="icon-doc">
@@ -3907,7 +3910,7 @@
                             <div class="financial-model__rental-graph">
                                 <img src="img/rental-graph.svg" alt="" class="financial-model__rental-graph-image">
                                 <div class="financial-model__rental-graph-investments js-graph-investments">
-                                    
+
                                 </div>
                                 <div class="financial-model__rental-zero-point">
                                     0 ₽
@@ -3956,7 +3959,7 @@
                             </p>
                         </div>
                     </div>
-                    <a href="#" class="what-is-included__link">
+                    <a href="#callback-modal" class="what-is-included__link js-open-modal">
                         Стать партнером
                     </a>
                 </div>
@@ -7017,6 +7020,160 @@
 
 
 <section class="franchise-block geography" id="geography">
+    <script>
+        let pointsMapData = [
+            {
+                coords: [55.831082, 49.079644],
+                open: false,
+                content: `
+                        <div class="geography__popover-content">
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Адрес
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    ул. Декабристов, 131Е
+                                </div>
+                            </div>
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Оборот
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    500 000 ₽
+                                </div>
+                            </div>
+                            <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                        </div>
+                    `
+            },
+            {
+                coords: [55.815159, 49.101276],
+                open: true,
+                content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                    </div>
+                `
+            },
+            {
+                coords: [55.812957, 49.183735],
+                open: false,
+                content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                    </div>
+                `
+            },
+            {
+                coords: [55.79474, 49.114071],
+                open: false,
+                content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                    </div>
+                `
+            },
+            {
+                coords: [55.833308, 49.132141],
+                open: true,
+                content: `
+                        <div class="geography__popover-content">
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Адрес
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    ул. Декабристов, 131Е
+                                </div>
+                            </div>
+                            <div class="geography__popover-content-info-block">
+                                <h4 class="geography__popover-content-info-block-heading">
+                                    Оборот
+                                </h4>
+                                <div class="geography__popover-content-info-block-text">
+                                    500 000 ₽
+                                </div>
+                            </div>
+                            <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                        </div>
+                    `
+            },
+            {
+                coords: [55.776266, 49.140724],
+                open: false,
+                content: `
+                    <div class="geography__popover-content">
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Адрес
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                ул. Декабристов, 131Е
+                            </div>
+                        </div>
+                        <div class="geography__popover-content-info-block">
+                            <h4 class="geography__popover-content-info-block-heading">
+                                Оборот
+                            </h4>
+                            <div class="geography__popover-content-info-block-text">
+                                500 000 ₽
+                            </div>
+                        </div>
+                        <a href="#video-modal" class="geography__popover-content-info-block-link js-open-modal">Видео-отзыв</a>
+                    </div>
+                `
+            }
+        ];
+    </script>
     <div class="container">
         <div class="franchise-block__content geography__content">
             <div class="inner-container">
@@ -7376,7 +7533,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#" class="success-stories__slider-card-image-container">
+                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7421,7 +7578,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" class="success-stories__slider-card-link">
+                                        <a href="#callback-modal"
+                                            class="success-stories__slider-card-link js-open-modal">
                                             Получить контакты франчайзи
                                         </a>
                                     </div>
@@ -7431,7 +7589,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#" class="success-stories__slider-card-image-container">
+                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7476,7 +7634,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" class="success-stories__slider-card-link">
+                                        <a href="#callback-modal"
+                                            class="success-stories__slider-card-link js-open-modal">
                                             Получить контакты франчайзи
                                         </a>
                                     </div>
@@ -7486,7 +7645,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#" class="success-stories__slider-card-image-container">
+                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7531,7 +7690,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" class="success-stories__slider-card-link">
+                                        <a href="#callback-modal"
+                                            class="success-stories__slider-card-link js-open-modal">
                                             Получить контакты франчайзи
                                         </a>
                                     </div>

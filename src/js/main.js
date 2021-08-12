@@ -28,6 +28,7 @@ import franchiseCatalog from './franchiseCatalog';
 import showMoreBtns from './showMoreBtns';
 import articles from './articles';
 import projectNewsSlider from './projectNewsSlider';
+import players from './players';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showMoreBtns();
     articles();
     projectNewsSlider();
+    players();
 });
 
 window.addEventListener('load', function() {
