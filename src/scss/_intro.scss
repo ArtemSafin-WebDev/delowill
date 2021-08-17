@@ -216,6 +216,12 @@
         }
     }
 
+    &:not(.intro__franchise-button--filled).active {
+        .intro__franchise-button-icon {
+            color: white;
+        }
+    }
+
     .no-touch &:not(.intro__franchise-button--filled):hover,
     .touch &:not(.intro__franchise-button--filled):active {
         .intro__franchise-button-icon {

@@ -29,8 +29,10 @@ import showMoreBtns from './showMoreBtns';
 import articles from './articles';
 import projectNewsSlider from './projectNewsSlider';
 import players from './players';
+import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', function() {
+    
     polyfills();
     detectTouch();
     vhUnits();
@@ -60,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     articles();
     projectNewsSlider();
     players();
+
+    window.axios = axios;
 });
 
 window.addEventListener('load', function() {

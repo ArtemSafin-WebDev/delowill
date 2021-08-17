@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <div class="intro__franchise-buttons-col">
-                        <a href="#" class="intro__franchise-button">
+                        <a href="#" class="intro__franchise-button js-add-to-fav" data-id="3">
                             Добавить в избранное
                             <div class="intro__franchise-button-icon">
 
@@ -7406,6 +7406,30 @@
 <section class="franchise-block what-is-next">
     <div class="container">
         <div class="franchise-block__content what-is-next__content what-is-next__content--darker">
+            <script>
+                let citiesRating = {
+
+                    Москва: {
+                        "name": "Москве",
+                        "2gis": 7.8,
+                        "yandex": 8.2,
+                        "google": 8.1
+                    },
+                    Екатеринбург: {
+                        "name": "Екатеринбург",
+                        "2gis": 5,
+                        "yandex": 4,
+                        "google": 3
+                    },
+                    Краснодар: {
+                        "name": "Краснодар",
+                        "2gis": 7,
+                        "yandex": 9,
+                        "google": 9
+                    },
+
+                };
+            </script>
             <div class="inner-container">
                 <h2 class="what-is-next__heading">
                     Что делать дальше?
@@ -7428,7 +7452,7 @@
                             избранное” и через панель сверху перейдите на страницу сравнения.
                         </p>
                     </div>
-                    <a href="#" class="what-is-next__link">
+                    <a href="#" class="what-is-next__link js-add-to-fav" data-id="3">
                         Добавить в избранное
                         <div class="what-is-next__link-icon">
                             <svg width="14" height="14" aria-hidden="true" class="icon-star">
@@ -7646,7 +7670,8 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
+                                    <a href="#video-modal"
+                                        class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7702,7 +7727,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
+                                    <a href="#video-modal"
+                                        class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7758,7 +7784,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="success-stories__slider-card">
-                                    <a href="#video-modal" class="success-stories__slider-card-image-container js-open-modal">
+                                    <a href="#video-modal"
+                                        class="success-stories__slider-card-image-container js-open-modal">
                                         <img src="img/succes-stories.jpg" alt=""
                                             class="success-stories__slider-card-image">
                                         <div class="success-stories__slider-card-play">
@@ -7870,7 +7897,7 @@
 
                             </div>
 
-                            <a href="#" class="like-franchise__card-btn">
+                            <a href="#" class="like-franchise__card-btn js-add-to-fav" data-id="3">
                                 Добавить в избранное
                                 <div class="like-franchise__card-btn-icon">
                                     <svg width="14" height="14" aria-hidden="true" class="icon-star">
@@ -7998,7 +8025,7 @@
                     </h3>
                     <div class="modal__form-fields">
                         <div class="modal__form-field">
-                            <input type="tel" class="modal__form-input js-phone-input" required placeholder="Телефон">
+                            <input type="tel" name="phone" class="modal__form-input js-phone-input" required placeholder="Телефон">
                         </div>
                         <div class="modal__form-field">
                             <textarea name="comment" class="modal__form-input" placeholder="Комментарий"></textarea>

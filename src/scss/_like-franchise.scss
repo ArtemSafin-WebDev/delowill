@@ -134,6 +134,12 @@
         color: white;
     }
 
+    &.active {
+        .like-franchise__card-btn-icon {
+            color: white;
+        }
+    }
+
     .no-touch &:hover,
     .touch &:active {
         .like-franchise__card-btn-icon {

@@ -4620,6 +4620,9 @@ select:-webkit-autofill:focus {
 .intro__franchise-button--filled:link, .intro__franchise-button--filled:visited {
   color: white;
 }
+.intro__franchise-button:not(.intro__franchise-button--filled).active .intro__franchise-button-icon {
+  color: white;
+}
 .no-touch .intro__franchise-button:not(.intro__franchise-button--filled):hover .intro__franchise-button-icon, .touch .intro__franchise-button:not(.intro__franchise-button--filled):active .intro__franchise-button-icon {
   color: white;
 }
@@ -5618,6 +5621,9 @@ select:-webkit-autofill:focus {
   }
 }
 .like-franchise__card-btn:link, .like-franchise__card-btn:visited {
+  color: white;
+}
+.like-franchise__card-btn.active .like-franchise__card-btn-icon {
   color: white;
 }
 .no-touch .like-franchise__card-btn:hover .like-franchise__card-btn-icon, .touch .like-franchise__card-btn:active .like-franchise__card-btn-icon {
@@ -11366,6 +11372,9 @@ textarea.account__block-input {
   font-family: var(--gotham);
 }
 .what-is-next__link:link, .what-is-next__link:visited {
+  color: #39b833;
+}
+.what-is-next__link.active .what-is-next__link-icon {
   color: #39b833;
 }
 .no-touch .what-is-next__link:hover .what-is-next__link-icon, .touch .what-is-next__link:active .what-is-next__link-icon {
