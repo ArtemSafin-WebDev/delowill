@@ -16,7 +16,7 @@ export default function sectionsMenu() {
             contentPadding = parseInt(getComputedStyle(container).getPropertyValue('padding-left'), 10);
         }
 
-        console.log('Content padding', contentPadding);
+        
 
         const items = sectionsMenuLinks.map(link => {
             const id = link.hash.replace('to-', '');

@@ -97,8 +97,6 @@ export default function whatIsIncludedAdvancedView() {
 
                 const distance = lastMark.getBoundingClientRect().top - firstMark.getBoundingClientRect().top;
 
-                console.log('Distance', distance);
-
                 firstMark.parentElement.parentElement.parentElement.style.setProperty('--bar-height', distance + 'px');
             };
 

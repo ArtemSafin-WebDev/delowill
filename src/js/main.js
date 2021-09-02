@@ -30,6 +30,7 @@ import articles from './articles';
 import projectNewsSlider from './projectNewsSlider';
 import players from './players';
 import axios from 'axios';
+import newCalculator from './calculatorNew';
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -48,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
     accordions();
     successStoriesSlider();
     formatSlider();
-    calculator();
+    // calculator();
+    newCalculator();
     whatIsIncludedChart();
     whatIsIncludedAdvancedView();
     datepicker();
